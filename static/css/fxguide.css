@@ -1,10 +1,12 @@
 /* =========================================================
-   FX Guide Style Sheet
+   FX Guide Style Sheet (rate.css 정렬 통합 완성본)
    파일명: fxguide.css
-   설명: 외환가이드 섹션에 특화된 헤더/푸터/사이드바 및 본문 스타일
+   설명: 외환가이드 & 환율서비스 공통 스타일 (사이드바 유지)
    ========================================================= */
 
-/* 기본 초기화 및 폰트 */
+/* ------------------------------
+   🔹 기본 초기화 및 폰트
+------------------------------ */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -20,11 +22,12 @@ body {
 
 a {
   color: inherit;
+  text-decoration: none;
 }
 
-/* ------------------------------------
-   🔹 상단 헤더 영역 (top-bar + main-nav)
------------------------------------- */
+/* ------------------------------
+   🔹 헤더 (top-bar + main-nav)
+------------------------------ */
 .top-bar {
   background: #fafafa;
   border-bottom: 1px solid #ddd;
@@ -42,7 +45,6 @@ a {
 }
 
 .top-bar a {
-  text-decoration: none;
   color: #555;
   transition: color 0.2s ease;
 }
@@ -58,7 +60,6 @@ a {
 }
 
 .right-menu a {
-  text-decoration: none;
   color: #555;
   font-size: 14px;
   transition: color 0.2s ease;
@@ -86,7 +87,6 @@ a {
   list-style: none;
   display: flex;
   gap: 40px;
-  margin: 0;
 }
 
 .nav-menu > li {
@@ -94,7 +94,6 @@ a {
 }
 
 .nav-menu > li > a {
-  text-decoration: none;
   color: #111;
   font-weight: 600;
   padding: 15px;
@@ -102,8 +101,7 @@ a {
   transition: color 0.2s ease;
 }
 
-.nav-menu > li > a:hover,
-.nav-menu > li > a:focus {
+.nav-menu > li > a:hover {
   color: #4A6FA5;
 }
 
@@ -116,7 +114,6 @@ a {
 .nav-icons a {
   color: #333;
   font-size: 18px;
-  text-decoration: none;
   transition: color 0.2s ease;
 }
 
@@ -124,6 +121,9 @@ a {
   color: #4A6FA5;
 }
 
+/* ------------------------------
+   🔹 드롭다운 메뉴
+------------------------------ */
 .dropdown {
   position: absolute;
   top: 100%;
@@ -160,7 +160,6 @@ a {
 }
 
 .menu-column h4 a {
-  text-decoration: none;
   color: #111;
   transition: color 0.2s ease;
 }
@@ -182,7 +181,6 @@ a {
 }
 
 .menu-column li a {
-  text-decoration: none;
   color: #777;
   transition: color 0.2s ease;
 }
@@ -191,25 +189,29 @@ a {
   color: #4A6FA5;
 }
 
-/* ------------------------------------
+/* ------------------------------
    🔹 메인 레이아웃
------------------------------------- */
+------------------------------ */
 .fxguide-container {
   display: flex;
-  justify-content: center;
-  gap: 40px;
-  max-width: 1100px;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
   margin: 80px auto;
   align-items: flex-start;
   padding: 0 20px;
 }
 
+/* ------------------------------
+   🔹 사이드바
+------------------------------ */
 .fxguide-sidebar {
   width: 230px;
   background: #fff;
   border: 1px solid #e2e6ec;
   border-radius: 10px;
   padding: 25px 20px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.04);
   height: fit-content;
 }
 
@@ -220,56 +222,54 @@ a {
   margin-bottom: 20px;
 }
 
-.fxguide-sidebar nav {
-  display: grid;
-  gap: 20px;
-}
-
 .fxguide-category {
   list-style: none;
-  margin: 0;
   padding: 0;
 }
 
-.fxguide-group-title {
-  font-size: 13px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: #7b8798;
-  margin-bottom: 10px;
+.fxguide-category > li {
+  margin-bottom: 14px;
+}
+
+.fxguide-category > li > a {
+  color: #222;
+  font-size: 15px;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.fxguide-category > li > a:hover {
+  color: #2C5DE5;
 }
 
 .fxguide-subcategory {
   list-style: none;
-  margin: 0;
-  padding: 0 0 0 10px;
-  display: grid;
-  gap: 8px;
-  padding-left: 0;
+  margin-top: 8px;
+  padding-left: 10px;
+}
+
+.fxguide-subcategory li {
+  margin-bottom: 6px;
 }
 
 .fxguide-subcategory a {
-  display: block;
-  padding: 10px 12px;
-  border-radius: 8px;
-  color: #222;
-  font-size: 14px;
-  font-weight: 500;
-  transition: background 0.2s ease, color 0.2s ease;
+  color: #666;
+  font-size: 13px;
+  transition: color 0.2s ease;
 }
 
-.fxguide-link-list a:hover,
-.fxguide-link-list a:focus {
-  background: #f0f4ff;
+.fxguide-subcategory a:hover {
   color: #2C5DE5;
 }
 
-.fxguide-link-list a.active {
-  background: #e7edff;
+.fxguide-subcategory li.active a {
   color: #2C5DE5;
   font-weight: 700;
 }
 
+/* ------------------------------
+   🔹 본문 영역
+------------------------------ */
 .fxguide-content {
   flex: 1;
   background: #fff;
@@ -277,40 +277,100 @@ a {
   border-radius: 10px;
   padding: 30px 40px;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.04);
-  display: grid;
-  gap: 28px;
   min-height: 500px;
 }
 
-.fxguide-heading {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.fxguide-heading h1 {
-  font-size: 28px;
+.fxguide-content h1,
+.fxguide-content h2 {
+  font-size: 20px;
   color: #22304E;
+  border-bottom: 2px solid #E3E7EC;
+  padding-bottom: 12px;
+  margin-bottom: 28px;
 }
 
-.fxguide-tagline {
+.fxguide-content p {
   font-size: 14px;
-  color: #4f5d78;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 25px;
 }
 
-.fxguide-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: linear-gradient(90deg, #4A6FA5, #2C5DE5);
-  color: #fff;
-  padding: 8px 16px;
-  border-radius: 999px;
-  font-size: 13px;
+/* 정보/단계 박스 */
+.fxguide-info-box,
+.fxguide-step-box,
+.fxguide-card {
+  background: #f7f9fc;
+  border: 1px solid #e3e7ec;
+  border-radius: 8px;
+  padding: 24px 28px;
+  margin-bottom: 25px;
+}
+
+.fxguide-info-box h4,
+.fxguide-step-box h4,
+.fxguide-card h4 {
+  color: #2C5DE5;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.fxguide-info-box ul,
+.fxguide-step-box ol {
+  margin-left: 20px;
+  color: #555;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* 표 스타일 */
+.fxguide-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border: 1px solid #e2e6ec;
+  text-align: left;
+}
+
+.fxguide-table th,
+.fxguide-table td {
+  border: 1px solid #e2e6ec;
+  padding: 10px 14px;
+  font-size: 14px;
+}
+
+.fxguide-table th {
+  background: #f7f9fc;
+  color: #22304E;
   font-weight: 600;
-  letter-spacing: 0.3px;
 }
 
+.fxguide-caption {
+  font-size: 13px;
+  color: #777;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+/* 리스트 */
+.fxguide-step-list {
+  list-style: decimal;
+  margin-left: 20px;
+  color: #555;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* 노트 및 캡션 */
+.fxguide-note {
+  font-size: 13px;
+  color: #777;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+/* 강조 블록 */
 .fxguide-highlight {
   border-left: 3px solid #4A6FA5;
   background: #f3f6fb;
@@ -318,166 +378,10 @@ a {
   border-radius: 10px;
   color: #22304E;
   font-weight: 500;
+  margin-bottom: 25px;
 }
 
-.fxguide-card-grid {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-}
-
-.fxguide-card {
-  border-radius: 12px;
-  padding: 22px;
-  border: 1px solid #e2e6ec;
-  background: #f8fbff;
-  display: grid;
-  gap: 10px;
-}
-
-.fxguide-card h3 {
-  font-size: 17px;
-  color: #22304E;
-}
-
-.fxguide-card p {
-  font-size: 14px;
-  color: #555;
-}
-
-.fxguide-section h2 {
-  font-size: 20px;
-  color: #22304E;
-  margin-bottom: 12px;
-}
-
-.fxguide-section p {
-  color: #4f5d78;
-  font-size: 14px;
-}
-
-.fxguide-section ul {
-  list-style: none;
-  display: grid;
-  gap: 8px;
-  margin-top: 10px;
-  padding-left: 0;
-}
-
-.fxguide-section ul li {
-  padding-left: 18px;
-  position: relative;
-  color: #4f5d78;
-  font-size: 14px;
-}
-
-.fxguide-section ul li::before {
-  content: '\2022';
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: #2C5DE5;
-  font-size: 18px;
-}
-
-.fxguide-step-list {
-  counter-reset: step;
-  display: grid;
-  gap: 16px;
-  padding-left: 0;
-}
-
-.fxguide-step-list li {
-  list-style: none;
-  background: #f0f4ff;
-  padding: 18px 22px 18px 60px;
-  border-radius: 12px;
-  position: relative;
-  color: #384762;
-}
-
-.fxguide-step-list li::before {
-  counter-increment: step;
-  content: counter(step);
-  position: absolute;
-  left: 22px;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 26px;
-  width: 26px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  background: #2C5DE5;
-  color: #fff;
-  font-weight: 700;
-}
-
-.fxguide-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 12px;
-  font-size: 14px;
-}
-
-.fxguide-table thead {
-  background: #22304E;
-  color: #fff;
-}
-
-.fxguide-table th,
-.fxguide-table td {
-  padding: 14px 18px;
-  border: 1px solid #e2e6ec;
-  text-align: left;
-}
-
-.fxguide-table tbody tr:nth-child(even) {
-  background: #f5f7fb;
-}
-
-.fxguide-caption {
-  font-size: 13px;
-  color: #647290;
-  margin-top: 6px;
-}
-
-.fxguide-callout {
-  border-radius: 10px;
-  padding: 20px 24px;
-  border: 1px dashed #c1cce0;
-  background: #f5f8ff;
-  color: #22304E;
-  font-size: 14px;
-  display: grid;
-  gap: 8px;
-}
-
-.fxguide-kpi {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 18px;
-}
-
-.fxguide-kpi-item {
-  background: #f8fbff;
-  border-radius: 12px;
-  padding: 20px;
-  border: 1px solid #e2e6ec;
-  text-align: center;
-}
-
-.fxguide-kpi-item strong {
-  display: block;
-  font-size: 24px;
-  color: #2C5DE5;
-}
-
-.fxguide-kpi-item span {
-  font-size: 13px;
-  color: #55637c;
-}
-
+/* 다운로드 버튼 */
 .fxguide-download {
   display: inline-flex;
   align-items: center;
@@ -486,7 +390,6 @@ a {
   border-radius: 8px;
   border: 1px solid #4A6FA5;
   color: #22304E;
-  text-decoration: none;
   font-weight: 600;
   transition: background 0.2s ease, color 0.2s ease;
 }
@@ -496,14 +399,13 @@ a {
   color: #fff;
 }
 
-/* ------------------------------------
+/* ------------------------------
    🔹 푸터
------------------------------------- */
+------------------------------ */
 .footer {
   background: #f8f8f8;
   border-top: 1px solid #e5e5e5;
-  box-shadow: none;
-  padding: 60px 0 70px 0;
+  padding: 60px 0 70px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -516,12 +418,10 @@ a {
 
 .footer-links {
   margin-bottom: 25px;
-  text-align: center;
 }
 
 .footer-links a {
   color: #444;
-  text-decoration: none;
   margin: 0 10px;
 }
 
@@ -585,9 +485,9 @@ a {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
 }
 
-/* ------------------------------------
+/* ------------------------------
    🔹 반응형
------------------------------------- */
+------------------------------ */
 @media (max-width: 1024px) {
   .top-bar,
   .main-nav {
@@ -602,7 +502,7 @@ a {
   .fxguide-container {
     flex-direction: column;
     gap: 24px;
-    margin: 50px auto;
+    margin: 40px auto;
   }
 
   .fxguide-sidebar,
@@ -620,4 +520,102 @@ a {
   .fxguide-content {
     padding: 24px 20px;
   }
+}
+/* ------------------------------
+   🔹 본문 섹션 간 구분 여백 (가독성 강화)
+------------------------------ */
+.fxguide-section {
+  margin-top: 50px;        /* 섹션 사이 넉넉한 구분 */
+  padding-top: 10px;
+  border-top: 2px solid #E3E7EC; /* 구분선 추가 */
+}
+
+.fxguide-section h2 {
+  font-size: 20px;
+  color: #22304E;
+  margin-bottom: 20px;
+}
+
+/* 표 위아래 간격 조정 */
+.fxguide-table {
+  margin-top: 18px;
+  margin-bottom: 14px;
+}
+
+/* 표 이후 캡션 여백 */
+.fxguide-caption {
+  margin-top: 10px;
+  margin-bottom: 35px;
+  color: #5a657a;
+}
+
+/* 리스트와 섹션 간 여백 */
+.fxguide-step-list {
+  margin-top: 15px;
+  margin-bottom: 35px;
+}
+
+/* 리스크 관리 포인트 박스 강조 */
+.fxguide-callout {
+  border: 1px solid #cbd6e2;
+  border-radius: 10px;
+  background: #f7f9fc;
+  padding: 24px 28px;
+  line-height: 1.8;
+  color: #22304E;
+}
+
+.fxguide-callout strong {
+  display: block;
+  margin-top: 12px;
+  color: #2C5DE5;
+  font-weight: 700;
+}
+
+/* 다운로드 버튼과 섹션 간 간격 */
+.fxguide-download {
+  margin-top: 30px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: 1px solid #4A6FA5;
+  color: #22304E;
+  font-weight: 600;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.fxguide-download:hover {
+  background: #4A6FA5;
+  color: #fff;
+}
+/* fxguide 카드 제목 색상 통일 */
+.fxguide-card h3 {
+  color: #2C5DE5; /* 💙 환리스크와 같은 메인 포인트 색상 */
+  font-weight: 700;
+}
+
+/* 카드 제목과 본문 간 간격 확대 */
+.fxguide-card h3 {
+  color: #2C5DE5;
+  font-weight: 700;
+  font-size: 17px;
+  margin-bottom: 16px; /* 기존 10px → 16px로 증가 */
+}
+
+/* ------------------------------
+   🔹 Tip 구역 제목 아래 여백 보정
+------------------------------ */
+.fxguide-card strong,
+.fxguide-info-box strong,
+.fxguide-step-box strong {
+  display: block;
+  margin-bottom: 8px; /* 🔹 Tip 제목과 문장 사이 간격 */
+  color: #2C5DE5;     /* 강조색 유지 */
+}
+.fxguide-card h4 {
+  margin-bottom: 10px;
+  color: #2C5DE5;
+  font-weight: 700;
 }
