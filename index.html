@@ -43,7 +43,7 @@
 
       <div class="nav-icons">
         <a href="#"><i class="fa-solid fa-comment-dots"></i></a>
-        <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+        <a href="#" class="search-trigger" aria-haspopup="dialog" aria-controls="searchModal"><i class="fa-solid fa-magnifying-glass"></i></a>
       </div>
     </div>
 
@@ -214,6 +214,57 @@
     </div>
   </div>
 </footer>
+
+  <!-- 검색 모달 -->
+  <div class="search-modal-overlay" id="searchModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="search-modal" role="document">
+      <div class="search-modal__header">
+        <h2 class="visually-hidden">검색</h2>
+        <div class="search-input-wrapper">
+          <label for="globalSearch" class="visually-hidden">검색어 입력</label>
+          <input type="text" id="globalSearch" placeholder="검색어를 입력하세요." autocomplete="off" />
+          <button type="button" class="search-submit" aria-label="검색">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+        <button type="button" class="modal-close" aria-label="닫기">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="search-modal__content">
+        <div class="search-section">
+          <h3>최근 검색어</h3>
+          <ul class="search-list">
+            <li class="empty">최근 검색 내역이 없습니다.</li>
+          </ul>
+        </div>
+        <div class="search-section">
+          <h3>인기 검색어</h3>
+          <ol class="search-list rank">
+            <li>환율우대</li>
+            <li>여행자보험</li>
+            <li>OTP</li>
+            <li>환율 계산기</li>
+            <li>외화예금</li>
+            <li>모바일뱅킹</li>
+            <li>자동이체</li>
+            <li>주거래</li>
+            <li>카드교체</li>
+            <li>무료주차</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="search-modal__footer">
+        <span>자동저장</span>
+        <label class="toggle">
+          <input type="checkbox" checked />
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+  </div>
 
 <script src ="./static/js/index.js"></script>
 
