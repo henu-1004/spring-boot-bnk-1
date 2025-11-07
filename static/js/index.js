@@ -3,37 +3,81 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuItems = document.querySelectorAll(".menu-item");
   const megaMenu = document.querySelector(".mega-menu");
   const groups = document.querySelectorAll(".menu-group");
+  const searchTrigger = document.querySelector(".search-trigger");
+  const searchModal = document.getElementById("searchModal");
+  const closeButton = searchModal?.querySelector(".search-top-sheet__close");
+  const searchForm = searchModal?.querySelector(".search-top-sheet__form");
+  const searchInput = document.getElementById("globalSearch");
 
   if (!nav || !menuItems.length || !megaMenu) {
     console.error("❌ 메뉴 요소를 찾지 못했습니다.");
-    return;
+  } else {
+    // ✅ hover 시 열림
+    menuItems.forEach(item => {
+      item.addEventListener("mouseenter", () => {
+        megaMenu.classList.add("show");
+        menuItems.forEach(i => i.classList.remove("active"));
+        item.classList.add("active");
+      });
+    });
+
+    // ✅ header와 mega-menu를 벗어나면 닫힘
+    document.addEventListener("mousemove", e => {
+      const navRect = nav.getBoundingClientRect();
+      const menuRect = megaMenu.getBoundingClientRect();
+
+      const inside =
+        e.clientX >= Math.min(navRect.left, menuRect.left) &&
+        e.clientX <= Math.max(navRect.right, menuRect.right) &&
+        e.clientY >= Math.min(navRect.top, menuRect.top) &&
+        e.clientY <= Math.max(navRect.bottom, menuRect.bottom);
+
+      if (!inside) {
+        megaMenu.classList.remove("show");
+        menuItems.forEach(i => i.classList.remove("active"));
+      }
+    });
   }
 
-  // ✅ hover 시 열림
-  menuItems.forEach(item => {
-    item.addEventListener("mouseenter", () => {
-      megaMenu.classList.add("show");
-      menuItems.forEach(i => i.classList.remove("active"));
-      item.classList.add("active");
+  // 검색 모달
+  if (searchTrigger && searchModal) {
+    const openModal = () => {
+      searchModal.classList.add("open");
+      searchModal.setAttribute("aria-hidden", "false");
+      document.body.classList.add("modal-open");
+      setTimeout(() => searchInput?.focus(), 150);
+    };
+
+    const closeModal = () => {
+      searchModal.classList.remove("open");
+      searchModal.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("modal-open");
+      searchTrigger.focus();
+    };
+
+    searchTrigger.addEventListener("click", event => {
+      event.preventDefault();
+      openModal();
     });
-  });
 
-  // ✅ header와 mega-menu를 벗어나면 닫힘
-  document.addEventListener("mousemove", e => {
-    const navRect = nav.getBoundingClientRect();
-    const menuRect = megaMenu.getBoundingClientRect();
+    closeButton?.addEventListener("click", closeModal);
 
-    const inside =
-      e.clientX >= Math.min(navRect.left, menuRect.left) &&
-      e.clientX <= Math.max(navRect.right, menuRect.right) &&
-      e.clientY >= Math.min(navRect.top, menuRect.top) &&
-      e.clientY <= Math.max(navRect.bottom, menuRect.bottom);
+    searchForm?.addEventListener("submit", event => {
+      event.preventDefault();
+    });
 
-    if (!inside) {
-      megaMenu.classList.remove("show");
-      menuItems.forEach(i => i.classList.remove("active"));
-    }
-  });
+    searchModal.addEventListener("click", event => {
+      if (event.target === searchModal) {
+        closeModal();
+      }
+    });
+
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape" && searchModal.classList.contains("open")) {
+        closeModal();
+      }
+    });
+  }
 });
 
 
