@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>외화 예금 1</title>
+  <link rel="stylesheet" href="/static/css/deposit.css">
+  
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    crossorigin="anonymous"
+    />
+
+</head>
+<body>
+
+  <!-- 상단 헤더 -->
+  <header>
+    <div class="top-bar">
+      <ul>
+        <li><a href="#">기업뱅킹</a></li>
+        <li><a href="#">하나카드</a></li>
+        <li><a href="#">은행소개</a></li>
+        <li><a href="#">채용안내</a></li>
+      </ul>
+
+      <div class="right-menu">
+        <a href="#">로그인</a>
+        <a href="#">회원가입</a>
+        <a href="#">Language ▾</a>
+      </div>
+    </div>
+
+    <div class="main-nav">
+      <div class="logo">
+        <img src="/static/images/logo.png" alt="OO은행 로고">
+      </div>
+
+
+    <!-- ✅ nav 메뉴 -->
+    <ul class="nav-menu">
+      <li class="menu-item" data-target="menu1"><a href="#">외화예금</a></li>
+      <li class="menu-item" data-target="menu2"><a href="#">외화송금</a></li>
+      <li class="menu-item" data-target="menu3"><a href="#">환전</a></li>
+      <li class="menu-item" data-target="menu4"><a href="#">환율</a></li>
+      <li class="menu-item" data-target="menu5"><a href="#">유학/이주/여행</a></li>
+      <li class="menu-item" data-target="menu6"><a href="#">고객센터</a></li>
+      <li class="menu-item" data-target="menu7"><a href="#">은행소개</a></li>
+    </ul>
+
+    <div class="nav-icons">
+      <a href="#"><i class="fa-solid fa-comment-dots"></i></a>
+      <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+      <a href="#"><i class="fa-solid fa-bars"></i></a>
+    </div>
+
+    <!--  드롭다운들 여기로 옮김 -->
+    <div id="menu1" class="dropdown">
+      <div class="menu-column">
+        <h4><a href="#">외화예금상품</a></h4>
+      </div>
+      <div class="menu-column">
+        <h4><a href="#">외화예금안내</a></h4>
+        <ul>
+          <li><a href="#">외화예금안내</a></li>
+          <li><a href="#">당행외화이체</a></li>
+          <li><a href="#">해외외화예금개설</a></li>
+        </ul>
+      </div>
+      <div class="menu-column">
+        <h4><a href="#">외화예금우대서비스</a></h4>
+      </div>
+    </div>
+
+    <div id="menu2" class="dropdown">
+      <div class="menu-column">
+        <h4><a href="#">외화송금서비스</a></h4>
+        <ul>
+          <li><a href="#">인터넷외화송금서비스</a></li>
+          <li><a href="#">BNK공동해외송금서비스</a></li>
+          <li><a href="#">해외즉시송금서비스</a></li>
+        </ul>
+      </div>
+      <div class="menu-column">
+        <h4><a href="#">외화송금보내기</a></h4>
+        <ul>
+          <li><a href="#">송금안내</a></li>
+          <li><a href="#">송금하기</a></li>
+        </ul>
+      </div>
+      <div class="menu-column"><h4><a href="#">외화송금받기</a></h4></div>
+    </div>
+
+    <div id="menu3" class="dropdown">
+      <div class="menu-column">
+        <h4><a href="#">환전안내</a></h4>
+        <ul>
+          <li><a href="#">환전 가능 통화</a></li>
+          <li><a href="#">환전 가능 금액</a></li>
+          <li><a href="#">환전 요령</a></li>
+        </ul>
+      </div>
+      <div class="menu-column"><h4><a href="#">환율 우대</a></h4></div>
+      <div class="menu-column"><h4><a href="#">환전 계산기</a></h4></div>
+      <div class="menu-column"><h4><a href="#">환전하기</a></h4></div>
+    </div>
+
+    <div id="menu4" class="dropdown">
+      <div class="menu-column">
+        <h4><a href="#">환율 제공 서비스</a></h4>
+        <ul>
+          <li><a href="#">지정환율통지서비스</a></li>
+          <li><a href="#">이메일환율통지서비스</a></li>
+          <li><a href="#">무료환율표서비스</a></li>
+        </ul>
+      </div>
+      <div class="menu-column"><h4><a href="#">외환시장 동향</a></h4></div>
+      <div class="menu-column"><h4><a href="#">환리스크 관리</a></h4></div>
+    </div>
+
+    <div id="menu5" class="dropdown">
+      <div class="menu-column">
+        <h4><a href="#">유학</a></h4>
+        <ul>
+          <li><a href="#">해외유학서비스안내</a></li>
+          <li><a href="#">유학경비환전/송금</a></li>
+          <li><a href="#">해외유학지원서비스</a></li>
+        </ul>
+      </div>
+      <div class="menu-column">
+        <h4><a href="#">이주</a></h4>
+        <ul>
+          <li><a href="#">해외이주서비스안내</a></li>
+          <li><a href="#">해외이주비환전/송금</a></li>
+        </ul>
+      </div>
+      <div class="menu-column">
+        <h4><a href="#">여행</a></h4>
+        <ul>
+          <li><a href="#">여행시유의사항</a></li>
+          <li><a href="#">여행경비환전</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="menu6" class="dropdown">
+      <div class="menu-column"><h4><a href="#">고객상담</a></h4></div>
+      <div class="menu-column"><h4><a href="#">이용안내</a></h4></div>
+      <div class="menu-column"><h4><a href="#">금융소비자보호</a></h4></div>
+      <div class="menu-column"><h4><a href="#">상품공시실</a></h4></div>
+      <div class="menu-column"><h4><a href="#">자료실</a></h4></div>
+    </div>
+
+    <div id="menu7" class="dropdown">
+      <div class="menu-column"><h4><a href="#">은행안내</a></h4></div>
+      <div class="menu-column"><h4><a href="#">OO은행 스토리</a></h4></div>
+      <div class="menu-column"><h4><a href="#">투자자정보</a></h4></div>
+      <div class="menu-column"><h4><a href="#">영업점 안내</a></h4></div>
+    </div>
+
+  </div>
+</header>
+
+
+
+<main class="view-main">
+
+  <!-- 왼쪽 카테고리 -->
+  <aside class="list-sidebar">
+    <h3 class="list-title">외화예금</h3>
+    <ul class="list-category">
+      <li class="active"><a href="#">외화예금상품</a></li>
+      <li><a href="#">외화예금안내</a></li>
+    </ul>
+  </aside>
+
+
+  <div class="step1-container">
+    <h2 class="step1-title">BNK 모아드림 외화적금</h2>
+
+  <div class="step1-steps">
+    <div class="step1-step active">
+      <span class="num">1</span><span class="text">약관동의</span>
+    </div>
+    <div class="step1-step">
+      <span class="num">2</span><span class="text">정보입력</span>
+    </div>
+    <div class="step1-step">
+      <span class="num">3</span><span class="text">입력정보확인</span>
+    </div>
+  </div>
+
+  <!-- 1️⃣ 약관 및 상품설명서 -->
+  <section class="step1-section">
+    <h3 class="step1-subtitle">약관 및 상품설명서</h3>
+    <ul class="step1-link-list">
+      <li>
+        <label>
+          <input type="checkbox" class="step1-checkbox">
+          <a href="#" target="_blank">
+            <span>[필수] 예금거래기본약관</span>
+            <i class="fa-solid fa-angle-right"></i>
+          </a>
+        </label>
+      </li>
+      <li>
+        <label>
+          <input type="checkbox" class="step1-checkbox">
+          <a href="#" target="_blank">
+            <span>[필수] 외화예금거래기본약관</span>
+            <i class="fa-solid fa-angle-right"></i>
+          </a>
+        </label>
+      </li>
+      <li>
+        <label>
+          <input type="checkbox" class="step1-checkbox">
+          <a href="#" target="_blank">
+            <span>[필수] 상품설명서</span>
+            <i class="fa-solid fa-angle-right"></i>
+          </a>
+        </label>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 2️⃣ 확인 및 안내사항 -->
+  <section class="step1-section">
+    <h3 class="step1-subtitle">확인 및 안내사항</h3>
+    <ul class="step1-info-list">
+      <li>
+        <label>
+          <input type="checkbox" class="step1-checkbox">
+          <span>[필수] 불법탈법·차명거래 금지 설명 확인</span>
+        </label>
+        <p>
+          「금융실명거래 및 비밀보장에 관한 법률」 제3조 제1항에 따라 누구든지 불법재산의 은닉,
+          자금세탁행위, 공중협박자금 조달행위 및 거래명의의 단독 등 탈법행위를 목적으로 타인의 실명으로
+          금융거래를 해서는 아니되며, 이를 위반 시 5년 이하의 징역 또는 5천만원 이하의 벌금이 처벌될 수 있습니다.
+        </p>
+      </li>
+
+      <li>
+        <label>
+          <input type="checkbox" class="step1-checkbox">
+          <span>[필수] 예금자보호법 설명확인</span>
+        </label>
+        <p>
+          본인이 가입하는 금융상품의 예금자보호여부(보호 또는 비보호) 및 보호한도에 대하여
+          은행으로부터 설명을 듣고 이해하였음을 확인합니다.
+        </p>
+      </li>
+
+      <li>
+        <label>
+          <input type="checkbox" class="step1-checkbox">
+          <span>[필수] 외화현찰수수료확인</span>
+        </label>
+        <p>
+          미국 달러화(USD)의 외화현찰을 외화예금에 입금할 경우 및 외화현찰의 이외의 지급수단을 받은 외화 통으로 입금할 때
+          외화현찰로 인출할 경우 환전수수료를 부과할 수 있음을 설명받고 이해하였음을 확인합니다.
+        </p>
+      </li>
+    </ul>
+  </section>
+
+    <!-- 3️⃣ 금융상품의 중요사항 안내 -->
+    <section class="step1-section">
+    <h3 class="step1-subtitle">금융상품의 중요사항 안내</h3>
+    <div class="step1-text-area">
+        <label>
+        <input type="checkbox" class="step1-checkbox">
+        <a href="#" target="_blank">
+            <span>[필수] 우선설명 사항</span>
+            <i class="fa-solid fa-angle-right"></i>
+        </a>
+        </label>
+        <p>이자율(중도해지이율, 만기해지이율, 만기후이율) 및 산출근거</p>
+
+        <div class="divider"></div>
+
+        <label>
+        <input type="checkbox" class="step1-checkbox">
+        <a href="#" target="_blank">
+            <span>[필수] 부담정보 및 금융소비자의 권리 사항</span>
+            <i class="fa-solid fa-angle-right"></i>
+        </a>
+        </label>
+        <p>
+        중도 해지에 따른 불이익<br>
+        자료열람요구권 행사에 관한 사항<br>
+        위법계약해지권 행사에 관한 사항<br>
+        금융상품 단기 계약 안내(상담안내 및 알림 서비스)<br>
+        예금자보호에 관한 사항(예금자보호 여부 및 그 내용)<br>
+        민원처리 및 분쟁조정 절차
+        </p>
+
+        <div class="divider"></div>
+
+        <label>
+        <input type="checkbox" class="step1-checkbox">
+        <a href="#" target="_blank">
+            <span>[필수] 예금성 상품 및 연계·제휴 서비스</span>
+            <i class="fa-solid fa-angle-right"></i>
+        </a>
+        </label>
+        <p>
+        예금상품 내역(가입기간, 이자지급시기 및 지급제한 사유)<br>
+        계약해제 방법<br>
+        연계·제휴 서비스의 내용, 제공조건, 제공기간, 변경내용 및 알림 방법
+        </p>
+    </div>
+    </section>
+
+
+
+  <!-- ✅ 확인 문구 -->
+    <div class="step1-check-box">
+    <label class="step1-check-label">
+        <input type="checkbox" class="step1-checkbox">
+        <span>
+        본인은 위 예금상품의 약관 및 상품설명서를 제공받고 예금상품의 중요사항을 충분히 이해하며 본 상품에 가입함을 확인합니다.
+        </span>
+    </label>
+    <span class="step1-warning">
+        ※ 설명내용을 제대로 이해하지 못하였음에도 설명을 이해하였다는 확인을 하는 경우, 추후 권리구제가 어려울 수 있습니다.
+    </span>
+    </div>
+
+  <div class="step1-actions">
+    <a href="/deposit/view.html" class="step1-btn-prev">이전</a>
+    <a href="/deposit/deposit_step2.html" class="step1-btn-next">다음</a>
+  </div>
+</main>
+
+
+
+
+
+<!-- 푸터 -->
+<footer class="footer">
+  <div class="footer-links">
+    <a href="#">사고신고</a> |
+    <a href="#">상품공시실</a> |
+    <a href="#">보호금융상품등록부</a> |
+    <a href="#">경영공시</a> |
+    <a href="#">퇴직연금공시</a> |
+    <a href="#">인증센터</a> |
+    <a href="#">상담센터</a> |
+    <a href="#">개인정보처리방침</a> |
+    <a href="#">신용정보활용체계</a> |
+    <a href="#">영업점찾기</a>
+  </div>
+
+  <div class="footer-info">
+    <div class="footer-logos">
+      <img src="https://www.hanabank.com/static/images/footer/wa.png" alt="웹접근성">
+      <img src="https://www.hanabank.com/static/images/footer/isms.png" alt="ISMS">
+      <img src="https://www.hanabank.com/static/images/footer/bs7799.png" alt="BS 인증">
+    </div>
+    <p>© OO Bank. All rights reserved.</p>
+    <div class="footer-right">
+      <p><strong>고객센터</strong> 1588-1111 / 1599-1111</p>
+      <p><strong>고객센터(해외)</strong> +82-42-520-2500</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom-nav">
+    <div class="bottom-item">브랜드사이트 ▾</div>
+    <div class="bottom-item">하나네트워크 ▾</div>
+    <div class="bottom-item">글로벌네트워크 ↗</div>
+    <div class="bottom-item">하나은행 SNS ▾</div>
+    <div class="bottom-item">💬 하나소비자세상 ↗</div>
+  </div>
+</footer>
+
+<script src ="/static/js/index.js"></script>
+<script src ="/static/js/deposit.js"></script>
+
+</body>
+</html>
+
