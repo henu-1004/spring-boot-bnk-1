@@ -419,10 +419,14 @@ footer {
 }
 
 .btn-write {
-  background: #007b83;
-  color: #fff;
+  border: 1px solid #ccc;     
+  background: #f5f5f5;        
+  color: #222; 
   padding: 6px 14px;
   border-radius: 4px;
+  box-shadow: none; 
+  text-decoration: none; 
+  transition: all 0.25s ease;
 }
 
 .board-table {
@@ -457,7 +461,7 @@ footer {
 }
 
 .pagination a.active {
-  background: #007b83;
+  background: #333;
   color: #fff;
 }
 
@@ -485,15 +489,22 @@ footer {
 }
 
 .btn-edit, .btn-delete, .btn-list {
-  background: #f0f0f0;
+  border: 1px solid #ccc;        /* ✅ 연한 테두리 */
+  background: #f5f5f5;           /* ✅ 단색 회색 배경 */
+  color: #222;                   /* ✅ 검정 텍스트 */
+  box-shadow: none;              /* ✅ 그림자 제거 */
+  border-radius: 30px;
   padding: 6px 10px;
   margin-left: 6px;
-  border-radius: 4px;
+  
 }
 
 .btn-delete {
-  background: #e74c3c;
-  color: #fff;
+ border: 1px solid #ccc;        /* ✅ 연한 테두리 */
+  background: #f5f5f5;           /* ✅ 단색 회색 배경 */
+  color: #222;                   /* ✅ 검정 텍스트 */
+  box-shadow: none;              /* ✅ 그림자 제거 */
+  border-radius: 30px;
 }
 
 .btn-edit {
@@ -534,7 +545,7 @@ footer {
 }
 
 .pagination a.active {
-  background: linear-gradient(135deg, #22304E, #4A6FA5);
+  background: #333;
   border-color: #22304E;
   color: #fff;
   font-weight: 600;
@@ -631,21 +642,20 @@ footer {
   gap: 6px;
   padding: 12px 26px;
   border-radius: 30px;
-  border: none;
-  background: linear-gradient(135deg, #22304E, #4A6FA5);
-  color: #fff;
+  border: 1px solid #ccc;   
+  background: #f5f5f5;      
+  color: #222;
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;
-  box-shadow: 0 3px 8px rgba(34,48,78,0.3);
+   box-shadow: none;
   transition: all 0.25s ease;
   text-decoration: none;
 }
 
 .btn-submit:hover {
-  background: linear-gradient(135deg, #4FBDBA, #4A6FA5);
-  box-shadow: 0 4px 10px rgba(79,189,186,0.4);
-  transform: translateY(-2px);
+  background: #e0e0e0;
+ transform: translateY(-1px);
 }
 
 /* 취소 버튼 */
@@ -773,27 +783,30 @@ footer {
 
 /* 수정 버튼 */
 .view-footer .btn-submit {
-  background: linear-gradient(135deg, #22304E, #4A6FA5);
-  color: #fff;
-  box-shadow: 0 3px 8px rgba(34,48,78,0.3);
+border: 1px solid #ccc;   
+  background: #f5f5f5;      
+  color: #222;  
+   box-shadow: none; 
+  box-shadow: none;
 }
 
 .view-footer .btn-submit:hover {
-  background: linear-gradient(135deg, #4FBDBA, #4A6FA5);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(79,189,186,0.4);
+  background: #e0e0e0;    
+  transform: translateY(-1px);
 }
 
 /* 삭제 버튼 */
 .view-footer .btn-delete {
-  background: #E74C3C;
-  color: #fff;
-  box-shadow: 0 3px 6px rgba(231,76,60,0.3);
+   border: 1px solid #ccc;        /* ✅ 연한 테두리 */
+  background: #f5f5f5;           /* ✅ 단색 회색 배경 */
+  color: #222;                   /* ✅ 검정 텍스트 */
+  box-shadow: none;              /* ✅ 그림자 제거 */
+  border-radius: 30px;
 }
 
 .view-footer .btn-delete:hover {
-  background: #c0392b;
-  transform: translateY(-2px);
+  background: #e0e0e0;           /* ✅ hover 시 약간 어둡게 */
+  transform: translateY(-1px);
 }
 
 /* 목록 버튼 */
@@ -861,21 +874,20 @@ footer {
   gap: 6px;
   padding: 12px 28px;
   border-radius: 30px;
-  border: none;
-  background: linear-gradient(135deg, #22304E, #4A6FA5);
-  color: #fff;
+   border: 1px solid #ccc;   
+  background: #f5f5f5;      
+  color: #222;   
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;
-  box-shadow: 0 3px 8px rgba(34,48,78,0.3);
+  box-shadow: none;
   transition: all 0.25s ease;
   text-decoration: none;
 }
 
 .btn-submit:hover {
-  background: linear-gradient(135deg, #4FBDBA, #4A6FA5);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(79,189,186,0.4);
+  background: #e0e0e0;      
+  transform: translateY(-1px);
 }
 
 /* 취소 버튼 */
