@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>원화 계좌개설2</title>
-  <link rel="stylesheet" href="/static/css/mypage.css"> <!-- 각 카테고리별 css 입력-->
+  <title>원화 계좌이체 2</title>
+  <link rel="stylesheet" href="/static/css/mypage.css">
   
 
     <link
@@ -145,21 +145,13 @@
       </div>
     </div>
 
-
     <div id="menu6" class="dropdown">
-  <div class="menu-column">
-    <h4><a href="#">고객상담</a></h4>
-    <ul>
-      <li><a href="#">질문과 답변(Q&A)</a></li>
-      <li><a href="#">자주 묻는 질문</a></li>
-      <li><a href="#">챗봇</a></li>
-    </ul>
-  </div>
-  <div class="menu-column"><h4><a href="#">이용안내</a></h4></div>
-  <div class="menu-column"><h4><a href="#">금융소비자보호</a></h4></div>
-  <div class="menu-column"><h4><a href="#">상품공시실</a></h4></div>
-  <div class="menu-column"><h4><a href="#">자료실</a></h4></div>
-</div>
+      <div class="menu-column"><h4><a href="#">고객상담</a></h4></div>
+      <div class="menu-column"><h4><a href="#">이용안내</a></h4></div>
+      <div class="menu-column"><h4><a href="#">금융소비자보호</a></h4></div>
+      <div class="menu-column"><h4><a href="#">상품공시실</a></h4></div>
+      <div class="menu-column"><h4><a href="#">자료실</a></h4></div>
+    </div>
 
     <div id="menu7" class="dropdown">
       <div class="menu-column"><h4><a href="#">은행안내</a></h4></div>
@@ -171,96 +163,82 @@
   </div>
 </header>
 
+<main class="transfer2-container">
+  <div class="transfer2-box">
 
-
-<main class="open2-account-container">
-  <div class="open2-account-box">
-    <h2>입출금 통장 개설</h2>
-    <p class="desc">고객 정보를 확인하고 이체한도를 설정해주세요.</p>
-
-    <!-- ✅ 1. 고객 기본정보 -->
-    <section class="open2-user-info-section">
-      <div class="open2-form-group">
-        <label class="open2-form-label">아이디</label>
-        <input type="text" class="open2-form-input readonly" value="BANK1311051" readonly>
+    <!-- 단계 표시 -->
+    <div class="transfer2-steps">
+      <div class="transfer2-step">
+        <span class="num">1</span><span class="text">정보입력</span>
       </div>
-
-      <div class="open2-form-row">
-        <div class="open2-form-group half">
-          <label class="open2-form-label">생년월일</label>
-          <input type="text" class="open2-form-input readonly" value="2001-11-07" readonly>
-        </div>
-        <div class="open2-form-group half">
-          <label class="open2-form-label">성별</label>
-          <input type="text" class="open2-form-input readonly" value="여자" readonly>
-        </div>
+      <div class="transfer2-step active">
+        <span class="num">2</span><span class="text">입력확인</span>
       </div>
-
-      <div class="open2-form-group">
-        <label class="open2-form-label">휴대폰 번호</label>
-        <input type="text" class="open2-form-input readonly" value="010-1234-5678" readonly>
+      <div class="transfer2-step">
+        <span class="num">3</span><span class="text">이체완료</span>
       </div>
+    </div>
+
+    <!-- 제목 -->
+    <h2 class="transfer2-title">이체확인</h2>
+
+    <!-- 안내문 -->
+    <div class="transfer2-info-box">
+      <p>
+        • 즉시이체는 최대 5건까지 동시에 처리 가능하며, 이체 수수료가 면제됩니다.<br>
+        • 오픈뱅킹 서비스 가입자는 등록된 금융기관 계좌를 출금계좌로 선택하여 단건 이체만 가능합니다.<br>
+        • 당행 계좌 이체의 경우, 이체 완료 후 즉시 반영됩니다.<br>
+        • 타행 계좌 이체 시 입력 정보를 정확히 확인 후 진행해주세요.<br>
+        • 피싱 등 금융사기를 예방하기 위해 의심스러운 거래는 반드시 확인 후 진행 바랍니다.
+      </p>
+    </div>
+
+    <!-- 이체정보 -->
+    <section class="transfer2-section">
+      <h3 class="transfer2-subtitle">이체정보</h3>
+      <table class="transfer2-table">
+        <thead>
+          <tr>
+            <th>출금계좌(내통장표시)</th>
+            <th>입금계좌(받는분통장표시)</th>
+            <th>받는분</th>
+            <th>이체금액</th>
+            <th>수수료</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>333-3333-3333-3333<br><span class="sub">OOO</span></td>
+            <td>333-3333-3333-3333<br><span class="sub">OOO</span></td>
+            <td>OOO</td>
+            <td>10,000</td>
+            <td>0<br><span class="sub">우대수수료</span></td>
+          </tr>
+        </tbody>
+      </table>
     </section>
 
-    <!--  4. 휴대폰 인증 -->
-    <section class="open2-verify-section">
-      <div class="open2-form-group">
-        <label class="open2-form-label">휴대폰 인증</label>
-        <div class="open2-verify-box">
-          <input type="text" class="open2-form-input short" placeholder="인증번호 입력">
-          <button class="open2-btn-verify">인증요청</button>
-        </div>
-      </div>
-    </section>
-
-    <!--  2. 이체 한도 설정 -->
-    <section class="open2-limit-section">
-      <div class="open2-form-group">
-        <label class="open2-form-label">1일 이체한도</label>
-        <div class="open2-limit-box">
-          <input type="text" class="open2-limit-input" value="10,000,000">
-          <button class="open2-btn-limit">최대</button>
-        </div>
-        <p class="open2-guide-text">최소 1만원 ~ 최대 5억원 이내 수정 가능</p>
-      </div>
-
-      <div class="open2-form-group">
-        <label class="open2-form-label">1회 이체한도</label>
-        <div class="open2-limit-box">
-          <input type="text" class="open2-limit-input" value="1,000,000">
-          <button class="open2-btn-limit">최대</button>
-        </div>
-        <p class="open2-guide-text">최소 1만원 ~ 최대 1억원 이내</p>
-      </div>
-
-      <div class="open2-info-box">
+    <!-- 인증 안내 -->
+    <section class="transfer2-section">
+      <h3 class="transfer2-subtitle">인증 및 보안매체(보안카드, OTP) 입력 안내</h3>
+      <div class="transfer2-info-box small">
         <p>
-          ※ 이체한도를 설정하더라도, 금융사고 방지를 위해 1일 이체한도가 1,000만원으로 제한되는
-          금융거래한도계좌로 개설됩니다.
+          • BNK이체서비스(비이용자) 또는 타행이체의 경우 인증서 인증이 필요합니다.<br>
+          • 법인 및 외화 계좌 이체는 보안매체 인증이 필수입니다.<br>
+          • 개인 고객은 1회 1천만원, 1일 1천만원 한도로 이체 가능합니다.
         </p>
       </div>
     </section>
 
-    <!--  3. 계좌 비밀번호 -->
-    <section class="open2-password-section">
-      <div class="open2-form-group">
-        <label class="open2-form-label">계좌 비밀번호</label>
-        <input type="password" class="open2-form-input" maxlength="4" placeholder="숫자 4자리 입력">
-        <p class="open2-guide-text">입력하신 비밀번호는 이체 및 출금 시 사용됩니다.</p>
-      </div>
-
-      <div class="open2-form-group">
-        <label class="open2-form-label">계좌 비밀번호 확인</label>
-        <input type="password" class="open2-form-input" maxlength="4" placeholder="비밀번호 재입력">
-      </div>
-    </section>
-
-    <!--  5. 다음 버튼 -->
-    <div class="open2-form-actions">
-      <a href="/mypage/ko_account_open_3.html" class="open2-btn-next">완료</a>
+    <!-- 버튼 -->
+    <div class="transfer2-actions">
+      <a href="/index.html" class="transfer2-btn-sub">취소</a>
+      <a href="./ko_transfer_3.html" class="transfer2-btn-main">이체실행</a>
     </div>
+
   </div>
 </main>
+
 
 
 
@@ -304,7 +282,6 @@
 </footer>
 
 <script src ="/static/js/index.js"></script>
-<script src ="/static/js/mypage.js"></script>
 
 </body>
 </html>

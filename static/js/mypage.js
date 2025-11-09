@@ -108,3 +108,28 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const agreeAll = document.getElementById("agreeAll");
+  const checks = document.querySelectorAll(".term-check");
+
+  if (agreeAll && checks.length > 0) {
+    agreeAll.addEventListener("change", () => {
+      checks.forEach(chk => chk.checked = agreeAll.checked);
+    });
+
+    checks.forEach(chk => {
+      chk.addEventListener("change", () => {
+        agreeAll.checked = [...checks].every(c => c.checked);
+      });
+    });
+  }
+});
+
+
+
+
+
