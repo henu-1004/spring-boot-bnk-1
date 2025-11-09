@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>계좌이체 2</title>
+  <title>원화 계좌이체 1</title>
   <link rel="stylesheet" href="/static/css/mypage.css">
   
 
@@ -163,87 +163,115 @@
   </div>
 </header>
 
-<main class="transfer2-container">
-  <div class="transfer2-box">
 
+<main class="transfer1-container">
     <!-- 단계 표시 -->
-    <div class="transfer2-steps">
-      <div class="transfer2-step">
-        <span class="num">1</span><span class="text">정보입력</span>
-      </div>
-      <div class="transfer2-step active">
-        <span class="num">2</span><span class="text">입력확인</span>
-      </div>
-      <div class="transfer2-step">
-        <span class="num">3</span><span class="text">이체완료</span>
-      </div>
+    <div class="transfer1-steps">
+    <div class="transfer1-step active">
+        <span class="num">1</span>
+        <span class="text">정보입력</span>
+    </div>
+    <div class="transfer1-step">
+        <span class="num">2</span>
+        <span class="text">이체확인</span>
+    </div>
+    <div class="transfer1-step">
+        <span class="num">3</span>
+        <span class="text">이체완료</span>
+    </div>
     </div>
 
+  <div class="transfer1-box">
+
     <!-- 제목 -->
-    <h2 class="transfer2-title">이체확인</h2>
+    <h2 class="transfer1-title">계좌 이체</h2>
 
     <!-- 안내문 -->
-    <div class="transfer2-info-box">
+    <div class="transfer1-info-box">
       <p>
-        • 즉시이체는 최대 5건까지 동시에 처리 가능하며, 이체 수수료가 면제됩니다.<br>
-        • 오픈뱅킹 서비스 가입자는 등록된 금융기관 계좌를 출금계좌로 선택하여 단건 이체만 가능합니다.<br>
-        • 당행 계좌 이체의 경우, 이체 완료 후 즉시 반영됩니다.<br>
-        • 타행 계좌 이체 시 입력 정보를 정확히 확인 후 진행해주세요.<br>
-        • 피싱 등 금융사기를 예방하기 위해 의심스러운 거래는 반드시 확인 후 진행 바랍니다.
+        • 즉시이체는 최대 5건까지 동시에 처리 가능하며 이체 수수료가 면제됩니다.<br>
+        • 오픈뱅킹 서비스 가입자는 등록된 금융기관 계좌를 출금계좌로 선택하여 이체할 수 있습니다.<br>
+        • 예금이체는 은행 업무시간 중에만 가능합니다.<br>
+        • 자주쓰는 이체정보를 등록하여 더욱 편리하게 이용하실 수 있습니다.<br>
+        • 타인 계좌로 이체 시 계좌번호와 수취인명을 반드시 확인해주세요.
       </p>
     </div>
 
-    <!-- 이체정보 -->
-    <section class="transfer2-section">
-      <h3 class="transfer2-subtitle">이체정보</h3>
-      <table class="transfer2-table">
-        <thead>
-          <tr>
-            <th>출금계좌(내통장표시)</th>
-            <th>입금계좌(받는분통장표시)</th>
-            <th>받는분</th>
-            <th>이체금액</th>
-            <th>수수료</th>
-            <th>CMS코드</th>
-            <th>비고</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>333-3333-3333-3333<br><span class="sub">OOO</span></td>
-            <td>333-3333-3333-3333<br><span class="sub">OOO</span></td>
-            <td>OOO</td>
-            <td>10,000</td>
-            <td>0<br><span class="sub">우대수수료</span></td>
-            <td>-</td>
-            <td>-</td>
-          </tr>
-        </tbody>
-      </table>
+    <!-- 출금정보 -->
+    <section class="transfer1-section">
+      <h3 class="transfer1-subtitle">출금정보</h3>
+
+      <div class="transfer1-form-group">
+    <label class="transfer1-label">출금계좌</label>
+    <input type="text" class="transfer1-input readonly" 
+            value="부산은행 112-2188-1931-00 (잔액 4,419,197원)" readonly>
+    </div>
+      <div class="transfer1-form-group">
+        <label class="transfer1-label">이체금액</label>
+        <div class="transfer1-flex">
+          <input type="text" class="transfer1-input short" placeholder="금액 입력">
+          <div class="transfer1-btn-group">
+            <button>10만</button>
+            <button>30만</button>
+            <button>50만</button>
+            <button>100만</button>
+            <button>전액</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="transfer1-form-group">
+        <label class="transfer1-label">내통장표시</label>
+        <input type="text" class="transfer1-input" placeholder="자주쓰는문구">
+      </div>
     </section>
 
-    <!-- 인증 안내 -->
-    <section class="transfer2-section">
-      <h3 class="transfer2-subtitle">인증 및 보안매체(보안카드, OTP) 입력 안내</h3>
-      <div class="transfer2-info-box small">
-        <p>
-          • BNK이체서비스(비이용자) 또는 타행이체의 경우 인증서 인증이 필요합니다.<br>
-          • 법인 및 외화 계좌 이체는 보안매체 인증이 필수입니다.<br>
-          • 개인 고객은 1회 1천만원, 1일 1천만원 한도로 이체 가능합니다.
-        </p>
+    <!-- 입금정보 -->
+    <section class="transfer1-section">
+      <h3 class="transfer1-subtitle">입금정보</h3>
+
+      <div class="transfer1-form-group">
+        <label class="transfer1-label">입금은행</label>
+        <select class="transfer1-select">
+          <option>부산은행</option>
+          <option>국민은행</option>
+          <option>우리은행</option>
+          <option>신한은행</option>
+          <option>플로은행</option>
+        </select>
+      </div>
+
+      <div class="transfer1-form-group">
+        <label class="transfer1-label">입금계좌번호</label>
+        <input type="text" class="transfer1-input" placeholder="계좌번호 입력">
+      </div>
+
+      <div class="transfer1-form-group">
+        <label class="transfer1-label">받는분 통장표시</label>
+        <input type="text" class="transfer1-input" placeholder="자주쓰는문구">
+      </div>
+    </section>
+
+    <!-- 선택입력정보 -->
+    <section class="transfer1-section">
+      <h3 class="transfer1-subtitle">선택입력정보</h3>
+
+      <div class="transfer1-flex-row">
+        <div class="transfer1-form-group half">
+          <label class="transfer1-label">내용조회메모</label>
+          <input type="text" class="transfer1-input" placeholder="내통장 메모 입력">
+        </div>
+
       </div>
     </section>
 
     <!-- 버튼 -->
-    <div class="transfer2-actions">
-      <button class="transfer2-btn-main">이체실행</button>
-      <button class="transfer2-btn-sub">취소</button>
+    <div class="transfer1-actions">
+      <button class="transfer1-btn-next">다음</button>
     </div>
 
   </div>
 </main>
-
-
 
 
 
