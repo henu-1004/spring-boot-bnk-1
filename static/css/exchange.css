@@ -508,6 +508,14 @@ footer {
   --border-light: #e5e5e5;
 }
 
+.step1-top-title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #22304E;  /* 플로뱅크 테마 색상 */
+  margin-bottom: 20px;
+}
+
 
 
 

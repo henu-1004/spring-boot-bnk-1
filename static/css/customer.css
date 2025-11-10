@@ -1061,3 +1061,53 @@ border: 1px solid #ccc;
   background: #f9fdfd;
   text-decoration: none !important;
 }
+
+
+/* 🔹 FAQ 전용 스타일 */
+.faq-container {
+  width: 100%;
+}
+
+.faq-category {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #22304E;
+  margin: 25px 0 10px;
+  border-left: 4px solid #22304E;
+  padding-left: 10px;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+}
+
+.faq-question {
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: color 0.3s;
+}
+
+.faq-question:hover {
+  color: #2C5DE5;
+}
+
+.faq-answer {
+  display: none;
+  padding: 10px 5px 10px 20px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+.faq-item.active .faq-question i {
+  transform: rotate(180deg);
+  transition: transform 0.3s;
+}

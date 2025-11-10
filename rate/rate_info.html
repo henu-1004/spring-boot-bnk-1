@@ -17,7 +17,6 @@
 <body>
 
   <!-- 상단 헤더 -->
-!-- 상단 헤더 -->
   <header>
     <div class="top-bar">
       <ul>
@@ -175,11 +174,17 @@
 
     <div class="rateinfo-search-box">
       <label for="rateinfo-date">조회일자</label>
-      <input type="date" id="rateinfo-date" value="2025-11-04">
+      <input type="date" id="rateinfo-date" class="rateinfo-input" value="2025-11-04">
+
+      <label for="rateinfo-round">고시회차</label>
+      <select id="rateinfo-round" class="rateinfo-select">
+        <option value="1">1회차</option>
+        <option value="2" selected>2회차</option>
+        <option value="3">3회차</option>
+      </select>
+
       <button class="rateinfo-btn-search">조회</button>
     </div>
-
-    <h3 class="rateinfo-subtitle">조회결과 <span>조회일자: 2025.11.04 현재</span></h3>
 
     <table class="rateinfo-table">
       <thead>

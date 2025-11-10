@@ -308,29 +308,29 @@ footer {
   --border-light: #e5e5e5;
 }
 
-/* 전체 레이아웃 */
+/*  마이페이지 전체 레이아웃 */
 .mypage-container {
-  display: flex;
-  justify-content: center;     /* 중앙 정렬 */
-  align-items: flex-start;     /* 위쪽 맞춤 */
-  gap: 40px;                   /* 좌우 간격 */
-  max-width: 1200px;           /* 전체 폭 제한 */
-  margin: 80px auto;           /* 화면 중앙 배치 */
+  display: grid;
+  grid-template-columns: 340px 1fr; /* 왼쪽(프로필+배너) / 오른쪽(내용) */
+  gap: 40px;
+  max-width: 1300px;
+  margin: 80px auto;
   padding: 0 40px;
+  align-items: start;
 }
 
-/* 왼쪽 프로필 카드 */
+/* ✅ 프로필 카드 */
 .profile-card {
-  flex: 0 0 280px; /* 고정폭 */
+  width: 100%;
+  max-width: 320px;
   background: #fff;
-  border: 1px solid var(--border-light);
-  border-radius: 12px;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
-  padding: 30px 20px;
-  height: fit-content;
-  position: sticky;
-  top: 100px;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  padding: 28px 24px;
 }
+
+
 
 .profile-header {
   text-align: center;
@@ -404,27 +404,37 @@ footer {
   margin: 15px 0 10px 0;
 }
 
-.btn-account-open {
-  background: var(--main-color); /* 딥네이비 단색 */
-  color: #fff;
+/* ✅ 완전히 독립된 버튼 스타일 */
+.btn-flow-open {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #22304E !important; /* ✅ 남색 확정 */
+  color: #fff !important;               /* ✅ 흰 글씨 강제 */
   border: none;
   border-radius: 6px;
   padding: 10px 18px;
   font-size: 14px;
   font-weight: 600;
+  text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease;
+  z-index: 10; /* 혹시 z-index 문제 대비 */
 }
 
-.btn-account-open i {
+.btn-flow-open i {
   margin-right: 6px;
 }
 
-.btn-account-open:hover {
-  background: var(--point-color); /* hover 시 스틸블루 */
+.btn-flow-open:hover {
+  background-color: #4FBDBA !important; /* ✅ hover 시 민트 */
+  color: #fff !important;
   box-shadow: 0 2px 6px rgba(34, 48, 78, 0.3);
   transform: translateY(-1px);
 }
+
+
+
 
 
 
@@ -442,12 +452,11 @@ footer {
   text-decoration: none;
 }
 
-/* 오른쪽 콘텐츠 영역 */
+/* ✅ 오른쪽 영역 (계좌정보, 거래내역 등) */
 .account-section {
-  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 35px;
 }
 
 /* 공통 카드 스타일 */
@@ -492,19 +501,8 @@ footer {
   color: var(--main-color);
 }
 
-/* 숨김 상태 */
-.hidden {
-  display: none;
-}
 
-/* 더보기 눌러서 펼칠 때 부드럽게 */
-.currency-list {
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  gap: 25px;
-  transition: all 0.3s ease;
-}
+
 
 
 /* 표 스타일 (account-table과 동일) */
@@ -613,19 +611,18 @@ footer {
   transition: background 0.3s ease;
 }
 
-/* 외화자산 */
+/* 🔹 외화 보유 자산 - 3x2 카드 정렬 */
 .currency-list {
-  display: flex;
-  justify-content: flex-start;
-  gap: 25px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* ✅ 가로 3개 */
+  gap: 24px;                             /* 카드 간격 */
+  justify-items: center;                 /* 중앙 정렬 */
+  margin-top: 20px;
 }
 
 .currency-card {
-  flex: 1;
-  min-width: 160px;
-  max-width: 200px;
-  background: var(--bg-light);
+  width: 180px;                          /* 카드 고정폭 */
+  background: #fff;
   border: 1px solid #ddd;
   border-radius: 12px;
   text-align: center;
@@ -640,9 +637,9 @@ footer {
 }
 
 .currency-card i {
-  font-size: 36px;
-  color: var(--sub-color);
-  margin-bottom: 10px;
+  font-size: 32px;
+  color: var(--point-color);
+  margin-bottom: 8px;
 }
 
 .currency-card p {
@@ -656,7 +653,6 @@ footer {
   margin-top: 6px;
   color: var(--text-dark);
 }
-
 
 
 
@@ -2598,4 +2594,230 @@ body.event-page {
   .eventpage-btn {
     width: 100%;
   }
+}
+
+
+
+
+/* 🔹 모달 전체 배경 */
+.modal {
+  display: none; /* 기본 숨김 */
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5); /* 배경 어둡게 */
+  justify-content: center;
+  align-items: center;
+}
+
+/* 🔹 모달 박스 */
+.modal-content {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  width: 420px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+  position: relative;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--main-color);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* 🔹 닫기 버튼 */
+.close-btn {
+  position: absolute;
+  right: 18px;
+  top: 14px;
+  font-size: 24px;
+  color: #999;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+.close-btn:hover {
+  color: #222;
+}
+
+/* 🔹 폼 스타일 */
+.user-info-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.user-info-form .form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.user-info-form label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 5px;
+}
+
+.user-info-form input {
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.user-info-form input:focus {
+  border-color: var(--point-color);
+  box-shadow: 0 0 4px rgba(74,111,165,0.3);
+}
+
+.user-info-form input[readonly] {
+  background-color: #f4f4f4;
+  color: #777;
+  cursor: not-allowed;
+}
+
+/* 🔹 저장 버튼 */
+.btn-save {
+  background: var(--main-color);
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-save:hover {
+  background: var(--point-color);
+  transform: translateY(-1px);
+}
+
+
+/* 🔹 주소 입력 그룹 */
+.address-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-inline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.input-inline input {
+  flex: 1;
+}
+
+.register-btn {
+  background: var(--point-color);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 13px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.register-btn:hover {
+  background: var(--main-color);
+}
+
+
+
+
+/*  왼쪽 컬럼 묶음 */
+.mypage-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px; /* 프로필-배너 간 간격 */
+}
+/* 
+ 출석 이벤트 배너 */
+.event-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.event-banner {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.event-banner:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.event-banner:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================================================
+   🔹 마이페이지 - 출석 이벤트 버튼형
+   ========================================================= */
+
+/* ✅ 출석 이벤트 버튼 (플로뱅크 블루 톤) */
+.btn-attendance {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #805ff8 !important;  /* 🔵 플로뱅크 블루 */
+  color: #fff !important;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+  box-shadow: 0 3px 8px rgba(44, 93, 229, 0.25);
+}
+
+.btn-attendance i {
+  margin-right: 6px;
+  font-size: 15px;
+}
+
+.btn-attendance:hover {
+  background-color: #1F47C5 !important;  /* hover 시 진한 블루 */
+  box-shadow: 0 4px 12px rgba(44, 93, 229, 0.35);
+  transform: translateY(-1px);
+}
+
+
+/* ✅ 출석 이벤트 버튼 정렬 */
+.event-btn {
+  display: flex;
+  justify-content: center; /* 가로 중앙 정렬 */
+  width: 100%;
+  margin-top: 20px; /* 프로필 카드와 약간 간격 */
 }

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>인터넷외화서비스</title>
-  <link rel="stylesheet" href="/static/css/remit.css"> <!-- 각 카테고리별 css 입력-->
+  <title>질문과답변</title>
+  <link rel="stylesheet" href="/static/css/customer.css"> <!-- 각 카테고리별 css 입력-->
   
 
     <link
@@ -145,13 +145,21 @@
       </div>
     </div>
 
+
     <div id="menu6" class="dropdown">
-      <div class="menu-column"><h4><a href="#">고객상담</a></h4></div>
-      <div class="menu-column"><h4><a href="#">이용안내</a></h4></div>
-      <div class="menu-column"><h4><a href="#">금융소비자보호</a></h4></div>
-      <div class="menu-column"><h4><a href="#">상품공시실</a></h4></div>
-      <div class="menu-column"><h4><a href="#">자료실</a></h4></div>
-    </div>
+  <div class="menu-column">
+    <h4><a href="#">고객상담</a></h4>
+    <ul>
+      <li><a href="#">질문과 답변(Q&A)</a></li>
+      <li><a href="#">자주 묻는 질문</a></li>
+      <li><a href="#">챗봇</a></li>
+    </ul>
+  </div>
+  <div class="menu-column"><h4><a href="#">이용안내</a></h4></div>
+  <div class="menu-column"><h4><a href="#">금융소비자보호</a></h4></div>
+  <div class="menu-column"><h4><a href="#">상품공시실</a></h4></div>
+  <div class="menu-column"><h4><a href="#">자료실</a></h4></div>
+</div>
 
     <div id="menu7" class="dropdown">
       <div class="menu-column"><h4><a href="#">은행안내</a></h4></div>
@@ -164,101 +172,117 @@
 </header>
 
 
-<!-- 메인 콘텐츠 영역 -->
-<main class="remit-container">
-  
-  <!-- 왼쪽 사이드 -->
-  <aside class="remit-sidebar">
-    <h3 class="remit-title">외화송금</h3>
-    <ul class="remit-category">
-      <li>
-        <a href="#">외화송금서비스</a>
-        <ul class="remit-subcategory">
-          <li><a href="#">인터넷외화송금서비스</a></li>
-          <li><a href="#">FLO 공동해외송금서비스</a></li>
-          <li><a href="#">해외즉시송금서비스</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">외화송금보내기</a>
-        <ul class="remit-subcategory">
-          <li><a href="#">송금안내</a></li>
-          <li><a href="#">송금하기</a></li>
-        </ul>
-      </li>
-<li>
-  <a href="#" style="color:#2C5DE5; font-weight:700;  border-left:3px;">
-    외화송금받기
-  </a>
-</li>
-    </ul>
-  </aside>
+ <main class="customer-container">
+    <!-- 🔹 사이드바 -->
+    <aside class="customer-sidebar">
+      <h3 class="customer-title">고객상담</h3>
+      <ul class="customer-category">
+        <li>
+          <a href="#">고객상담</a>
+          <ul class="customer-subcategory">
+            <li><a href="qna.html">질문과 답변(Q&A)</a></li>
+            <li class="active"><a href="#">자주 묻는 질문</a></li>
+            <li><a href="#">챗봇</a></li>
+          </ul>
+        </li>
+        <li><a href="#">이용안내</a></li>
+        <li><a href="#">금융소비자보호</a></li>
+        <li><a href="#">상품공시실</a></li>
+        <li><a href="#">자료실</a></li>
+      </ul>
+    </aside>
 
-  <!-- 오른쪽 본문 -->
-<section class="remit-content">
-  <div class="get-section">
-    <h2>외화송금받기 안내</h2>
-    <p>
-      외화송금받기 서비스는 해외에서 보낸 외화를 안전하고 신속하게 
-      국내 계좌로 수취할 수 있는 서비스입니다.  
-      수취인은 송금인의 정보와 송금은행을 확인하여 별도 방문 없이 
-      본인 계좌로 입금받을 수 있습니다.
-    </p>
+    <!-- 🔹 본문 -->
+    <section class="customer-content">
+      <h2>자주 묻는 질문(FAQ)</h2>
 
-    <h3>서비스 절차</h3>
-    <ul>
-      <li> 송금인이 해외에서 송금 실행</li>
-      <li> 은행 중개망(SWIFT)을 통해 송금 데이터 전송</li>
-      <li> 수취은행 확인 후 자동 입금 처리</li>
-      <li> 문자 알림 또는 인터넷뱅킹에서 수취 확인 가능</li>
-    </ul>
+      <div class="faq-container">
+        <!-- 🔸 카테고리: 환율 -->
+        <div class="faq-category">환율</div>
+        <div class="faq-item">
+          <div class="faq-question">
+            환율은 어떻게 결정되나요?
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            환율은 외환시장에서의 수요와 공급에 따라 결정됩니다. 주요 요인은 경제지표, 금리 수준, 국제 정세, 수출입 규모 등이며, 중앙은행의 정책도 영향을 미칠 수 있습니다.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            오늘의 환율은 어디서 확인할 수 있나요?
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            OO은행 홈페이지의 <strong>환율 메뉴</strong> 또는 모바일 앱의 ‘환율조회’ 기능을 통해 실시간 환율을 확인할 수 있습니다.
+          </div>
+        </div>
 
-    <h3>수취 가능 통화</h3>
-    <ul>
-      <li>미국달러(USD), 유로(EUR), 일본엔(JPY), 영국파운드(GBP), 캐나다달러(CAD) 등</li>
-      <li>일부 통화는 원화로 자동 환전되어 입금될 수 있음</li>
-    </ul>
+        <!-- 🔸 카테고리: 환전 -->
+        <div class="faq-category">환전</div>
+        <div class="faq-item">
+          <div class="faq-question">
+            환전 가능한 통화는 어떤 것이 있나요?
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            주요 통화(USD, JPY, EUR, CNY 등) 외에도 다양한 통화를 취급하고 있습니다. 지점별로 취급 통화가 다를 수 있으므로 방문 전 확인을 권장드립니다.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            환전은 어떻게 신청하나요?
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            인터넷뱅킹 또는 모바일뱅킹에서 환전 신청 후 가까운 지점에서 수령이 가능합니다. 일부 통화는 예약 환전만 가능합니다.
+          </div>
+        </div>
 
-    <h3>수취 시 유의사항</h3>
-    <ul>
-      <li>송금인의 성명·은행명·계좌번호가 정확히 일치해야 입금 가능</li>
-      <li>송금 목적 증빙이 필요할 수 있음 (예: 학비, 무역대금, 급여 등)</li>
-      <li>수취금액이 10,000 USD 이상일 경우 외국환거래법에 따른 신고 의무 발생</li>
-    </ul>
+        <!-- 🔸 카테고리: 환전 수수료 -->
+        <div class="faq-category">환전 수수료</div>
+        <div class="faq-item">
+          <div class="faq-question">
+            환전 수수료는 얼마인가요?
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            통화 종류와 금액, 거래 채널(인터넷, 모바일, 지점)에 따라 다릅니다. 일반적으로 USD 기준 약 1.75% 수준이며, 이벤트나 VIP 우대 시 감면 혜택이 제공됩니다.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            환율 우대란 무엇인가요?
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            환율 우대는 고객 등급 또는 이벤트 참여 시 환전 시 적용되는 환율을 일정 비율로 할인(우대)해주는 서비스입니다.
+          </div>
+        </div>
 
-    <div class="info-warning">
-      ※ SWIFT망 오류나 현지은행 확인 지연 시 수취까지 최대 2~5영업일이 소요될 수 있습니다.<br>
-      ※ FATF 고위험국가에서 송금된 자금은 심사 후 처리됩니다.
-    </div>
-  </div>
-</section>
-
-
-
-</main>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <!-- 🔸 카테고리: 외화예금 -->
+        <div class="faq-category">외화예금</div>
+        <div class="faq-item">
+          <div class="faq-question">
+            외화예금은 어떻게 개설하나요?
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            인터넷뱅킹 또는 가까운 지점 방문을 통해 외화예금을 개설할 수 있습니다. 신분증과 외화 입금수단(현찰, 송금 등)이 필요합니다.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            외화예금의 이자는 어떻게 계산되나요?
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            예금 통화별 금리에 따라 계산되며, 외화예금의 경우 국내 원화예금보다 변동폭이 클 수 있습니다. 금리는 환율 변동에 따라 주기적으로 조정됩니다.
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
 
 
@@ -306,6 +330,7 @@
 </footer>
 
 <script src ="/static/js/index.js"></script>
+<script src ="/static/js/customer.js"></script>
 
 </body>
 </html>
