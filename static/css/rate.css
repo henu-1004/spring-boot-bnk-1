@@ -625,3 +625,39 @@ footer {
 .rateinfo-table tr:hover {
   background: #f7faff;
 }
+
+
+
+/* 날짜 input과 select 통일 */
+.rateinfo-input,
+.rateinfo-select {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #333;
+  background-color: #fff;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  height: 38px; /* 동일 높이로 정렬 */
+}
+
+/* hover & focus 효과 */
+.rateinfo-input:hover,
+.rateinfo-select:hover {
+  border-color: #2C5DE5;
+}
+
+.rateinfo-input:focus,
+.rateinfo-select:focus {
+  outline: none;
+  border-color: #2C5DE5;
+  box-shadow: 0 0 3px rgba(44, 93, 229, 0.4);
+}
+
+/* input[type=date] 기본 달력 아이콘 정렬 보정 */
+.rateinfo-input::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  filter: invert(40%) sepia(70%) saturate(400%) hue-rotate(190deg);
+}
+

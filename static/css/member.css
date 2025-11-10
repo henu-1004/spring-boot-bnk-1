@@ -353,7 +353,7 @@ footer {
   align-items: stretch;
   gap: 30px;
   flex-wrap: nowrap;         /* ✅ 줄바꿈 방지 (폭 유지 위해 고정) */
-  width: calc((340px * 3) + (30px * 2)); /* ✅ 로그인 3박스 총폭 */
+  width: 420px; /* 기존보다 넓게 */
   margin: 40px auto 60px;
 }
 
@@ -363,9 +363,9 @@ footer {
   background: #fff;
   border: 1px solid #ddd;
   border-radius: 10px;
-  padding: 30px 40px;
-  width: 340px; /* ✅ 절대 줄이지 않음 */
-  height: 230px; /* ✅ 세로도 고정 */
+  padding: 40px 50px;
+  width: 420px; /* ✅ 절대 줄이지 않음 */
+  height: 300px; /* ✅ 세로도 고정 */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
@@ -438,7 +438,7 @@ footer {
 }
 
 
-//* OO은행 앱 로그인 — 가운데 정렬 유지 */
+/* OO은행 앱 로그인 — 가운데 정렬 유지 */
 .app-login {
   display: flex;
   flex-direction: column;
@@ -487,24 +487,6 @@ footer {
 
 
 
-
-/* 🔹 반응형 조정 (모바일에서 2줄로 자동 정렬) */
-@media (max-width: 1000px) {
-  .notice-list {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .notice-item {
-    flex: 1 1 calc(50% - 20px);
-    margin-bottom: 20px;
-  }
-}
-
-@media (max-width: 600px) {
-  .notice-item {
-    flex: 1 1 100%;
-  }
-}
 
 
 

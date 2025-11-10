@@ -21,7 +21,7 @@
     <div class="top-bar">
       <ul></ul>
       <div class="right-menu">
-        <a href="#">로그인</a>
+        <a href="/member/login.html">로그인</a>
         <a href="#">회원가입</a>
         <a href="#">Language ▾</a>
       </div>
@@ -50,27 +50,28 @@
     <!-- ✅ Mega Dropdown -->
     <div class="mega-menu">
       <div class="menu-group" data-menu="1">
-        <a href="#">외화예금상품</a>
-        <a href="#">외화예금안내</a>
+        <a href="/deposit/list.html">외화예금상품</a>
+        <a href="/deposit/info.html">외화예금안내</a>
       </div>
       <div class="menu-group" data-menu="2">
-        <a href="#">외화 송금하기</a>
-        <a href="#">외화 송금 안내</a>
+        <a href="/remit/en_transfer_1.html">외화 송금하기</a>
+        <a href="/remit/info.html">외화 송금 안내</a>
       </div>
       <div class="menu-group" data-menu="3">
-        <a href="#">환전하기</a>
-        <a href="#">환전 가능 통화</a>
-        <a href="#">환전안내</a>
+        <a href="/exchange/step1.html">환전하기</a>
+        <a href="/exchange/info1.html">환전 가능 통화</a>
+        <a href="/exchange/info2.html">환전안내</a>
         <a href="#">환전 계산기</a>
       </div>
       <div class="menu-group" data-menu="4">
-        <a href="#">환율 조회</a>
+        <a href="/rate/rate_info.html">환율 조회</a>
       </div>
       <div class="menu-group" data-menu="5">
-        <a href="#">질문과 답변(Q&A)</a>
-        <a href="#">자주 묻는 질문(FAQ)</a>
-        <a href="#">이벤트</a>
-        <a href="#">공지사항</a>
+        <a href="#">FLOBANK 소개</a>
+        <a href="/customer/qna_list.html">질문과 답변(Q&A)</a>
+        <a href="/customer/faq_list.html">자주 묻는 질문(FAQ)</a>
+        <a href="/customer/event_list.html">이벤트</a>
+        <a href="/customer/notice_list.html">공지사항</a>
       </div>
     </div>
   </header>
@@ -109,15 +110,15 @@
  <section class="foreign-section">
   <div class="foreign-container">
     <div class="foreign-item">
-      <h4><a href="#">입출금계좌 개설</a></h4>
+      <h4><a href="/mypage/account_open_main.html">입출금계좌 개설</a></h4>
       <p>언제 어디서나 간편하게</p>
     </div>
     <div class="foreign-item">
-      <h4><a href="#">환전</a></h4>
+      <h4><a href="/exchange/step1.html">환전</a></h4>
       <p>다양한 통화, 실시간 환율</p>
     </div>
     <div class="foreign-item">
-      <h4><a href="#">외화송금</a></h4>
+      <h4><a href="/remit/en_transfer_1.html">외화송금</a></h4>
       <p>빠르고 안전한 해외송금</p>
     </div>
     <div class="foreign-item">
@@ -125,8 +126,8 @@
       <p>실시간 환율 계산</p>
     </div>
     <div class="foreign-item">
-      <h4><a href="#">고객센터</a></h4>
-      <p>상담 및 안내 서비스</p>
+      <h4><a href="/customer/notice_list.html">공지사항</a></h4>
+      <p>플로뱅크의 알림사항</p>
     </div>
   </div>
 </section>
@@ -152,7 +153,7 @@
 
     <!-- 오른쪽 게시판 -->
     <div class="board-box">
-      <h3>뉴스·이벤트</h3>
+      <h3>이벤트</h3>
       <ul>
         <li><a href="#">[이벤트] 외화송금 수수료 50% 할인</a><span>2025.11.01</span></li>
         <li><a href="#">하나은행, ESG 경영 우수기관 선정</a><span>2025.10.28</span></li>
@@ -215,66 +216,63 @@
   </div>
 </footer>
 
-  <!-- 검색 Top Sheet (Slide-down Search Panel) -->
-  <div
-    class="search-top-sheet"
-    id="searchModal"
-    role="dialog"
-    aria-modal="true"
-    aria-hidden="true"
-    aria-labelledby="searchTopSheetTitle"
-  >
-    <div class="search-top-sheet__panel" role="document">
-      <div class="search-top-sheet__header">
-        <div class="search-top-sheet__headline">
-          <h2 class="search-top-sheet__title" id="searchTopSheetTitle">검색 Top Sheet</h2>
-          <p class="search-top-sheet__subtitle">Top Sheet (Op Sheet, Slide-down Search Panel)에서 원하는 정보를 바로 찾아보세요.</p>
-        </div>
-        <form class="search-top-sheet__form" role="search">
-          <label for="globalSearch" class="sr-only">검색어 입력</label>
-          <input type="text" id="globalSearch" placeholder="검색어를 입력하세요." autocomplete="off" />
-          <button type="submit" class="search-top-sheet__submit" aria-label="검색">
-            <i class="fa-solid fa-magnifying-glass"></i>
+    <!-- ✅ 수정된 검색 Top Sheet -->
+    <div
+      class="search-top-sheet"
+      id="searchModal"
+      role="dialog"
+      aria-modal="true"
+      aria-hidden="true"
+    >
+      <div class="search-top-sheet__panel" role="document">
+        <div class="search-top-sheet__header">
+          <form class="search-top-sheet__form" role="search">
+            <label for="globalSearch" class="sr-only">검색어 입력</label>
+            <input
+              type="text"
+              id="globalSearch"
+              placeholder="검색어를 입력하세요."
+              autocomplete="off"
+            />
+            <button
+              type="submit"
+              class="search-top-sheet__submit"
+              aria-label="검색"
+            >
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+
+          <button type="button" class="search-top-sheet__close" aria-label="닫기">
+            <i class="fa-solid fa-xmark"></i>
           </button>
-        </form>
-        <button type="button" class="search-top-sheet__close" aria-label="닫기">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
-      </div>
-
-      <div class="search-top-sheet__content">
-        <div class="search-section">
-          <h3>최근 검색어</h3>
-          <ul class="search-list">
-            <li class="empty">최근 검색 내역이 없습니다.</li>
-          </ul>
         </div>
-        <div class="search-section">
-          <h3>인기 검색어</h3>
-          <ol class="search-list rank">
-            <li>환율우대</li>
-            <li>여행자보험</li>
-            <li>OTP</li>
-            <li>환율 계산기</li>
-            <li>외화예금</li>
-            <li>모바일뱅킹</li>
-            <li>자동이체</li>
-            <li>주거래</li>
-            <li>카드교체</li>
-            <li>무료주차</li>
-          </ol>
-        </div>
-      </div>
 
-      <div class="search-top-sheet__footer">
-        <span>자동저장</span>
-        <label class="toggle">
-          <input type="checkbox" checked />
-          <span class="slider"></span>
-        </label>
-      </div>
-    </div>
-  </div>
+        <div class="search-top-sheet__content">
+          <div class="search-section">
+            <h3>최근 검색어</h3>
+            <ul class="search-list">
+              <li class="empty">최근 검색 내역이 없습니다.</li>
+            </ul>
+          </div>
+          <div class="search-section">
+            <h3>인기 검색어</h3>
+            <ol class="search-list rank">
+              <li>환율우대</li>
+              <li>여행자보험</li>
+              <li>OTP</li>
+              <li>환율 계산기</li>
+              <li>외화예금</li>
+              <li>모바일뱅킹</li>
+              <li>자동이체</li>
+              <li>주거래</li>
+              <li>카드교체</li>
+              <li>무료주차</li>
+            </ol>
+          </div>
+        </div>
+
+       
 
 <script src ="./static/js/index.js"></script>
 
