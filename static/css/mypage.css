@@ -2848,3 +2848,293 @@ body.event-page {
   color: #4A6FA5;  
   font-weight: 600;
 }
+
+
+
+/* =========================================================
+   💱 환전 상세 모달 (ex-modal)
+   ========================================================= */
+
+.ex-modal {
+  display: none; /* 기본 숨김 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.ex-modal-content {
+  background: #fff;
+  border-radius: 14px;
+  padding: 32px 40px;
+  width: 640px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  position: relative;
+  animation: fadeIn 0.25s ease-in-out;
+}
+
+.ex-modal-content h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--main-color);
+  margin-bottom: 18px;
+  text-align: center;
+  border-bottom: 1.5px solid #eee;
+  padding-bottom: 12px;
+}
+
+.ex-modal-content h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--main-color);
+  margin: 28px 0 10px;
+  border-left: 4px solid var(--main-color);
+  padding-left: 8px;
+}
+
+.ex-modal .close-btn {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  font-size: 22px;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+.ex-modal .close-btn:hover {
+  color: var(--main-color);
+}
+
+.ex-modal .detail-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.ex-modal .detail-table th,
+.ex-modal .detail-table td {
+  border: 1px solid #ddd;
+  padding: 10px 14px;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.ex-modal .detail-table th {
+  width: 32%;
+  background: #f5f8fa;
+  color: #333;
+  font-weight: 600;
+}
+
+.ex-modal .detail-table td {
+  color: #444;
+}
+
+/* 링크 스타일 */
+.exchange-link {
+  background: none;
+  border: none;
+  color: #2C5DE5;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 15px;
+  padding: 0;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+.exchange-link:hover {
+  color: #4FBDBA;
+  text-decoration: underline;
+}
+
+/* 스크롤바 */
+.ex-modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+.ex-modal-content::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+.ex-modal-content::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+
+
+
+/* =========================================================
+   💰 계좌 거래내역 모달
+   ========================================================= */
+
+.account-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.account-modal-content {
+  background: #fff;
+  border-radius: 14px;
+  padding: 32px 40px;
+  width: 720px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  position: relative;
+  animation: fadeIn 0.25s ease-in-out;
+}
+
+.account-modal-content h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--main-color);
+  text-align: center;
+  margin-bottom: 18px;
+  border-bottom: 1.5px solid #eee;
+  padding-bottom: 12px;
+}
+
+.account-modal-content h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--main-color);
+  margin: 28px 0 10px;
+  border-left: 4px solid var(--main-color);
+  padding-left: 8px;
+}
+
+.account-modal .close-btn {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  font-size: 22px;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+.account-modal .close-btn:hover {
+  color: var(--main-color);
+}
+
+.account-modal .detail-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.account-modal .detail-table th,
+.account-modal .detail-table td {
+  border: 1px solid #ddd;
+  padding: 10px 14px;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.account-modal .detail-table th {
+  width: 32%;
+  background: #f5f8fa;
+  color: #333;
+  font-weight: 600;
+}
+
+.account-modal .detail-table td {
+  color: #444;
+}
+
+/* 계좌번호 버튼 */
+.account-link {
+  background: none;
+  border: none;
+  color: #2C5DE5;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 15px;
+  padding: 0;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+.account-link:hover {
+  color: #4FBDBA;
+  text-decoration: underline;
+}
+
+/* 스크롤바 */
+.account-modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+.account-modal-content::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+.account-modal-content::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+
+/* ✅ 거래내역 테이블 비율 재조정 */
+.account-modal .transaction-table th:nth-child(1),
+.account-modal .transaction-table td:nth-child(1) {
+  width: 22%; /* 거래일시 */
+}
+
+.account-modal .transaction-table th:nth-child(2),
+.account-modal .transaction-table td:nth-child(2) {
+  width: 15%; /* 구분 - 더 줄임 */
+  text-align: center;
+}
+
+.account-modal .transaction-table th:nth-child(3),
+.account-modal .transaction-table td:nth-child(3) {
+  width: 18%; /* 거래금액 */
+  text-align: right;
+}
+
+.account-modal .transaction-table th:nth-child(4),
+.account-modal .transaction-table td:nth-child(4) {
+  width: 18%; /* 잔액 */
+  text-align: right;
+}
+
+.account-modal .transaction-table th:nth-child(5),
+.account-modal .transaction-table td:nth-child(5) {
+  width: 34%; /* ✅ 메모 칸 확 넓힘 */
+  text-align: left;
+}
+
+/* ✅ 스크롤 영역 유지 */
+.account-modal-content {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+/*  거래내역 헤더 텍스트 중앙 정렬 + 고정 */
+.account-modal .transaction-table thead th {
+  position: sticky;
+  top: 0;
+  background: #f5f8fa;
+  color: var(--main-color);
+  font-weight: 700;
+  text-align: center;   /* ✅ 가운데 정렬 */
+  vertical-align: middle;
+  border-bottom: 2px solid #ddd;
+  z-index: 2;
+}
+
+
+/* 확실하게 거래내역 헤더 중앙정렬 강제 */
+.account-modal .transaction-table thead th {
+  text-align: center !important;
+  vertical-align: middle;
+}
