@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>원화 계좌개설 완료</title>
-  <link rel="stylesheet" href="/static/css/mypage.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FLOBANK 소개</title>
+  <link rel="stylesheet" href="/static/css/customer.css" />
   <link rel="stylesheet" href="/static/css/header.css">
   <link rel="stylesheet" href="/static/css/footer.css">
 
-    <link
+  <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     crossorigin="anonymous"
-    />
-
+  />
 </head>
 <body>
 
@@ -77,24 +76,98 @@
     </div>
   </header>
 
- <!--  입출금통장 개설 완료 -->
-  <main class="open3-complete">
-    <div class="open3-complete-box">
-      <div class="open3-char-img">
-        <img src="/static/images/character2.png" alt="플로은행 캐릭터">
+
+<!-- =====================
+       Main
+====================== -->
+<main class="customer-container">
+
+  <!-- 사이드바 -->
+  <aside class="customer-sidebar">
+    <h3 class="customer-title">고객센터</h3>
+    <ul class="customer-category">
+      <li><a href="#" class="active">FLOBANK 소개</a></li>
+      <li><a href="#">질문과 답변(Q&A)</a></li>
+      <li><a href="#">자주 묻는 질문(FAQ)</a></li>
+      <li><a href="#">이벤트</a></li>
+      <li><a href="#">공지사항</a></li>
+    </ul>
+  </aside>
+
+  <!-- 본문 -->
+  <section class="customer-content">
+    <h2>FLOBANK 소개</h2>
+
+    <div class="intro-wrapper">
+      <!-- 상단 비주얼 -->
+      <div class="intro-hero">
+        <div class="hero-overlay">
+           <img src="/static/images/logo.png" alt="FLOBANK 로고" class="hero-logo">
+          <h3>Digital Flow, Financial Freedom</h3>
+          <p>기술과 신뢰로 금융의 흐름을 이끄는 디지털 종합은행</p>
+        </div>
       </div>
-      <div class="open3-complete-text">
-        <h2><span id="userName">홍길동</span>님, 통장 개설이 완료되었습니다!</h2>
+
+      <!-- 소개 -->
+      <div class="intro-section">
+        <h3><i class="fa-solid fa-water"></i> 우리는 이렇게 시작했습니다</h3>
         <p>
-          플로은행과 함께하는 새로운 금융 여정이 시작되었습니다.<br>
-          고객님의 자산을 <strong>안전하고, 효율적으로</strong> 관리해드리겠습니다.
+          FLOBANK는 ‘Flow(흐름)’와 ‘Bank(은행)’의 합성어로  
+          고객의 금융 여정을 부드럽게 이어주는 디지털 혁신 금융 플랫폼입니다.   
+          빠르게 변화하는 글로벌 금융 환경 속에서 우리는  
+          기술과 신뢰를 기반으로 한 금융 생태계를 만들어가고 있습니다.
         </p>
-        <a href="/" class="open3-complete-btn">메인으로 가기</a>
       </div>
+
+      <!-- 비전 -->
+      <div class="intro-section vision">
+        <h3><i class="fa-solid fa-bullseye"></i> 우리의 비전</h3>
+        <div class="vision-cards">
+          <div class="vision-card">
+            <i class="fa-solid fa-user-tie"></i>
+            <h4>고객 중심</h4>
+            <p>모든 금융 경험을 고객의 시선에서 설계합니다.</p>
+          </div>
+          <div class="vision-card">
+            <i class="fa-solid fa-robot"></i>
+            <h4>디지털 혁신</h4>
+            <p>AI·빅데이터 기술로 새로운 금융 패러다임을 선도합니다.</p>
+          </div>
+          <div class="vision-card">
+            <i class="fa-solid fa-earth-asia"></i>
+            <h4>글로벌 도약</h4>
+            <p>전 세계 어디서나 연결되는 디지털 금융 인프라를 구축합니다.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 주요 서비스 -->
+      <div class="intro-section">
+        <h3><i class="fa-solid fa-layer-group"></i> 주요 서비스</h3>
+        <div class="service-grid">
+          <div class="service-card">
+            <i class="fa-solid fa-plane-departure"></i>
+            <h4>해외송금</h4>
+            <p>전 세계 200여 개국으로 실시간 송금이 가능한 글로벌 네트워크</p>
+          </div>
+          <div class="service-card">
+            <i class="fa-solid fa-coins"></i>
+            <h4>외화예금</h4>
+            <p>다양한 통화를 한눈에 관리하고, 최적의 환율로 거래</p>
+          </div>
+          <div class="service-card">
+            <i class="fa-solid fa-money-bill-transfer"></i>
+            <h4>환전 서비스</h4>
+            <p>AI 환율 예측과 지정환율 알림으로 합리적인 환전</p>
+          </div>
+
+        </div>
+      </div>
+
+     
     </div>
-  </main>
-
-
+  </section>
+</main>
 
 
 
@@ -200,8 +273,7 @@
 
 
 
-<script src ="/static/js/index.js"></script>
 
+<script src="/static/js/index.js"></script>
 </body>
 </html>
-

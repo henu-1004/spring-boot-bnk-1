@@ -3,21 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>원화 계좌개설 완료</title>
-  <link rel="stylesheet" href="/static/css/mypage.css">
+  <title>공지사항 상세보기</title>
+  <link rel="stylesheet" href="/static/css/customer.css">
   <link rel="stylesheet" href="/static/css/header.css">
   <link rel="stylesheet" href="/static/css/footer.css">
-
-    <link
+  <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     crossorigin="anonymous"
-    />
-
+  />
 </head>
 <body>
 
-  <!-- 상단 헤더 -->
+  
+    <!-- 상단 헤더 -->
   <header>
     <div class="top-bar">
       <ul></ul>
@@ -77,24 +76,56 @@
     </div>
   </header>
 
- <!--  입출금통장 개설 완료 -->
-  <main class="open3-complete">
-    <div class="open3-complete-box">
-      <div class="open3-char-img">
-        <img src="/static/images/character2.png" alt="플로은행 캐릭터">
-      </div>
-      <div class="open3-complete-text">
-        <h2><span id="userName">홍길동</span>님, 통장 개설이 완료되었습니다!</h2>
-        <p>
-          플로은행과 함께하는 새로운 금융 여정이 시작되었습니다.<br>
-          고객님의 자산을 <strong>안전하고, 효율적으로</strong> 관리해드리겠습니다.
+
+
+
+<main class="customer-container">
+
+  <!-- 🔹 사이드바 -->
+  <aside class="customer-sidebar">
+    <h3 class="customer-title">고객센터</h3>
+
+    <ul class="customer-category">
+        <li><a href="#">FLOBANK 소개</a></li>
+        <li><a href="#">질문과 답변(Q&A)</a></li>
+        <li><a href="#">자주 묻는 질문(FAQ)</a></li>
+        <li><a href="#">이벤트</a></li>
+        <li><a href="#" class="active">공지사항</a></li>
+    </ul>
+
+  </aside>
+
+  <!-- 🔹 본문 -->
+  <section class="customer-content">
+    <h2>공지사항</h2>
+
+    <div class="qna-view">
+      <div class="view-header">
+        <h3>모바일 뱅킹 긴급 점검 안내 (11/12)</h3>
+        <p class="meta">
+          등록일 <span>2025-11-06</span> | 조회수 <span>104</span>
         </p>
-        <a href="/" class="open3-complete-btn">메인으로 가기</a>
+      </div>
+
+      <div class="view-body">
+        <p>
+          고객 여러분께 더욱 안정적인 서비스를 제공하기 위해<br>
+          아래 일정으로 모바일뱅킹 시스템 점검을 진행합니다.<br><br>
+          📅 <strong>점검일시</strong> : 2025년 11월 12일(수) 00:00 ~ 04:00<br>
+          ⚙️ <strong>점검내용</strong> : 모바일뱅킹 서버 점검 및 보안 강화<br><br>
+          점검 시간 동안 모바일뱅킹 서비스 이용이 불가하오니<br>
+          이 점 양해 부탁드립니다. 감사합니다.
+        </p>
+      </div>
+
+      <div class="view-footer">
+        <a href="noticeList.html" class="btn-cancel">
+          <i class="fa-solid fa-list"></i> 목록
+        </a>
       </div>
     </div>
-  </main>
-
-
+  </section>
+</main>
 
 
 
@@ -200,8 +231,9 @@
 
 
 
-<script src ="/static/js/index.js"></script>
 
+
+
+<script src="/static/js/index.js"></script>
 </body>
 </html>
-
