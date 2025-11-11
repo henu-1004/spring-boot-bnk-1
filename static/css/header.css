@@ -77,23 +77,6 @@ header {
 }
 
 
-.main-nav {
-  position: relative;
-  background: #fff;
-  border-bottom: 1px solid #ddd;
-  height: 80px;
-}
-
-.nav-menu {
-  position: absolute;
-  top: 50%;
-  left: 50%;                /* ✅ 화면 정중앙 고정 */
-  transform: translate(-50%, -50%);
-  display: flex;
-  gap: 70px;
-  list-style: none;
-}
-
 
 /* ✅ 드롭다운 완전 숨김 */
 .mega-menu {
@@ -172,29 +155,69 @@ header {
 
 
 
-/* 로고 */
+/* -------------------------------
+   🔹 메인 네비게이션 (비율 고정형)
+-------------------------------- */
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* 좌 - 중 - 우 3분할 정렬 */
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  height: 80px;
+  padding: 0 5vw; /* ✅ 브라우저 폭의 5% 여백 (반응형) */
+  position: relative;
+}
 
+/* 🔹 로고: 좌측 고정, 비율 유지 */
 .logo {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 340px; /* 기본값 */
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
 }
 
 .logo img {
-  height: 52px;  
+  height: 50px;
+  width: auto;
+  max-width: 100%;
   transition: transform 0.2s ease;
 }
 
-
-.nav-icons {
-  position: absolute;
-  top: 50%;
-  right: 80px;
-  transform: translateY(-50%);
+/* 🔹 메뉴: 중앙 정렬 */
+.nav-menu {
+  flex: 1; /* 가운데 영역 차지 */
   display: flex;
-  gap: 22px;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 4vw; /* ✅ 간격도 비율 단위로 조정 */
+  margin: 0;
+  padding: 0;
 }
+
+/* 🔹 오른쪽 아이콘 */
+.nav-icons {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1.5vw;
+}
+
+.nav-icons a {
+  color: #333;
+  font-size: 18px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav-icons a:hover {
+  color: #4A6FA5;
+}
+
+
+
+
+
 
 /*/////////////////////////////////////////////////////////////////////
 
