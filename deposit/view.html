@@ -204,15 +204,101 @@
       </div>
 
 
+    <!-- 🔹 금리안내 탭 내용 -->
+    <div class="view-content">
+      <dl class="view-detail">
+        <dt>외화정기예금금리 [추후에 크롤링한거 가져오기]</dt>
+        <dd class="rate-date">※ 2025.11.11 12:58:34 기준</dd>
+      </dl>
 
-      <!-- 🔹 금리안내 탭 내용 -->
-      <div class="view-content">
-        <dl class="view-detail">
-          <dt>기본금리</dt>
-          <dd>
-            신규 가입일 당시 영업점 및 당행 홈페이지에 고시된 기간별 외화 적금 이율 적용
-          </dd>
-        </dl>
+      <!-- 🔹 외화정기예금 금리표 -->
+      <div class="table-wrap">
+        <table class="tbl-basic">
+          <thead>
+            <tr>
+              <th>통화</th>
+              <th>1개월이상</th>
+              <th>2개월이상</th>
+              <th>3개월이상</th>
+              <th>6개월이상</th>
+              <th>9개월이상</th>
+              <th>12개월이상</th>
+              <th>24개월이상</th>
+              <th>36개월이상</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>미국 (USD)</td>
+              <td>3.2990</td>
+              <td>3.3066</td>
+              <td>3.2541</td>
+              <td>3.0840</td>
+              <td>3.0138</td>
+              <td>2.7836</td>
+              <td>2.6906</td>
+              <td>2.6073</td>
+            </tr>
+            <tr>
+              <td>일본 (JPY)</td>
+              <td>0.0000</td>
+              <td>0.0000</td>
+              <td>0.0000</td>
+              <td>0.0000</td>
+              <td>0.0000</td>
+              <td>0.0000</td>
+              <td>0.0000</td>
+              <td>0.0000</td>
+            </tr>
+            <tr>
+              <td>유럽 (EUR)</td>
+              <td>0.7349</td>
+              <td>0.8189</td>
+              <td>0.9845</td>
+              <td>1.1483</td>
+              <td>1.0978</td>
+              <td>1.0978</td>
+              <td>1.0978</td>
+              <td>1.0978</td>
+            </tr>
+            <tr>
+              <td>중국 (CNY)</td>
+              <td>0.0000</td>
+              <td>0.0000</td>
+              <td>0.0000</td>
+              <td>0.0000</td>
+              <td>0.0000</td>
+              <td>0.0000</td>
+              <td>0.0000</td>
+              <td>0.0000</td>
+            </tr>
+            <tr>
+              <td>영국 (GBP)</td>
+              <td>3.1376</td>
+              <td>3.0666</td>
+              <td>2.9457</td>
+              <td>2.8242</td>
+              <td>2.7345</td>
+              <td>2.4748</td>
+              <td>2.4868</td>
+              <td>2.4417</td>
+            </tr>
+            <tr>
+              <td>호주 (AUD)</td>
+              <td>2.5866</td>
+              <td>2.6254</td>
+              <td>2.6519</td>
+              <td>2.7497</td>
+              <td>2.8574</td>
+              <td>2.9752</td>
+              <td>2.9752</td>
+              <td>2.9752</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
 
 
         <dl class="view-detail">
@@ -301,7 +387,6 @@
             </tr>
           </tbody>
         </table>
-
       </div>
 
             <!-- 🔹 상품약관 탭 내용 -->
@@ -409,67 +494,9 @@
   </div>
 </footer>
 
-    <!-- ✅ 수정된 검색 Top Sheet -->
-    <div
-      class="search-top-sheet"
-      id="searchModal"
-      role="dialog"
-      aria-modal="true"
-      aria-hidden="true"
-    >
-      <div class="search-top-sheet__panel" role="document">
-        <div class="search-top-sheet__header">
-          <form class="search-top-sheet__form" role="search">
-            <label for="globalSearch" class="sr-only">검색어 입력</label>
-            <input
-              type="text"
-              id="globalSearch"
-              placeholder="검색어를 입력하세요."
-              autocomplete="off"
-            />
-            <button
-              type="submit"
-              class="search-top-sheet__submit"
-              aria-label="검색"
-            >
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-          </form>
-
-          <button type="button" class="search-top-sheet__close" aria-label="닫기">
-            <i class="fa-solid fa-xmark"></i>
-          </button>
-        </div>
-
-        <div class="search-top-sheet__content">
-          <div class="search-section">
-            <h3>최근 검색어</h3>
-            <ul class="search-list">
-              <li class="empty">최근 검색 내역이 없습니다.</li>
-            </ul>
-          </div>
-          <div class="search-section">
-            <h3>인기 검색어</h3>
-            <ol class="search-list rank">
-              <li>환율우대</li>
-              <li>여행자보험</li>
-              <li>OTP</li>
-              <li>환율 계산기</li>
-              <li>외화예금</li>
-              <li>모바일뱅킹</li>
-              <li>자동이체</li>
-              <li>주거래</li>
-              <li>카드교체</li>
-              <li>무료주차</li>
-            </ol>
-          </div>
-        </div>
-
-
-        
-
-<script src ="/static/js/index.js"></script>
 <script src ="/static/js/deposit.js"></script>
+<script src ="/static/js/index.js"></script>
+
 
 </body>
 </html>

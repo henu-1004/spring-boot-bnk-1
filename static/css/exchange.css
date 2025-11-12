@@ -657,3 +657,84 @@
   background: var(--highlight);
   transform: translateY(-2px);
 }
+
+
+
+
+
+/* ✅ 쿠폰 모달 기본 스타일 */
+.coupon-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.coupon-modal-content {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px 30px;
+  width: 320px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.coupon-modal-content h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.coupon-modal-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.coupon-modal-content li {
+  margin: 8px 0;
+}
+
+.coupon-option {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  background-color: #22304E;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.coupon-option:hover {
+  background-color: #22304E;
+}
+
+.coupon-close {
+  margin-top: 15px;
+  padding: 6px 12px;
+  background-color: #ccc;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* 쿠폰 적용 버튼 */
+.coupon-btn {
+  background-color: #22304E;
+  color: #fff;
+  border: none;
+  padding: 3px 8px;
+  font-size: 13px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.coupon-btn:hover {
+  background-color: #22304E;
+}

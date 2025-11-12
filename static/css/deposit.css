@@ -1639,3 +1639,76 @@
   background: #22304E;
   transform: translateY(-2px);
 }
+
+
+/* 🔹 외화정기예금 금리 테이블 스타일 */
+.table-wrap {
+  width: 100%;
+  overflow-x: auto; /* 모바일 대응: 좌우 스크롤 */
+  margin-top: 10px;
+}
+
+/* 표 전체 */
+.tbl-basic {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 15px 0 25px;
+  font-size: 13px;
+  text-align: center;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: #fff;
+  table-layout: fixed; /* ✅ 칸 너비 균등 분배 */
+}
+
+/* 헤더 */
+.tbl-basic thead th {
+  background: linear-gradient(180deg, #f9fafb 0%, #f1f3f5 100%);
+  color: #2c2f33;
+  font-weight: 600;
+  padding: 12px 10px;
+  border: 1px solid #ddd;
+  white-space: nowrap;
+}
+
+/* 데이터 셀 */
+.tbl-basic tbody td {
+  border: 1px solid #eee;
+  padding: 12px 10px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* 통화 컬럼 왼쪽정렬 + 포인트 */
+.tbl-basic tbody td:first-child {
+  text-align: left;
+  font-weight: 600;
+  color: #2C5DE5;
+  background-color: #f9fbff;
+}
+
+/* 짝수행 배경 */
+.tbl-basic tbody tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+
+/* 제목 영역 조정 */
+.view-detail dt {
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #1c1e21;
+  padding-left: 8px;
+}
+
+/* 🔹 기준일 표시 스타일 */
+.rate-date {
+  font-size: 10px;
+  color: #777;
+  margin-top: 4px;
+  margin-left: 2px;
+  font-weight: 400;
+}
+

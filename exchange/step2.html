@@ -129,7 +129,14 @@
         <h4>환전예상금액</h4>
         <table class="step2-result-table">
           <tr>
-            <th>원화금액</th>
+            <th>
+              수수료
+              <button type="button" id="couponBtn" class="coupon-btn">쿠폰 적용</button>
+            </th>
+            <td id="result-fee">0.30%</td>
+          </tr>
+          <tr>
+            <th>원화금액(수수료포함)</th>
             <td id="result-won">-</td>
           </tr>
           <tr>
@@ -179,10 +186,6 @@
         </select>
         <p class="step2-note red">※ 신청인 본인만 외화수령이 가능합니다.</p>
 
-        <!-- ✅ 외화ATM에서 찾기 체크박스 -->
-        <label class="step2-checkbox">
-          <input type="checkbox" id="atmCheck"> 외화ATM에서 찾기 (USD만 가능)
-        </label>
       </div>
 
       <div class="step2-form-group">
@@ -191,16 +194,6 @@
         <p class="step2-note">※ 최대 1개월 이내 수령 가능합니다.</p>
       </div>
 
-      <!-- 환전사유 -->
-      <div class="step2-form-group">
-        <label class="step2-label">환전사유</label>
-        <select class="step2-select">
-          <option>관광, 친지방문 등 일반해외여행경비</option>
-          <option>보유목적</option>
-          <option>유학경비</option>
-          <option>해외체재비</option>
-        </select>
-      </div>
 
       <!-- 버튼 -->
       <div class="step2-actions">
@@ -209,6 +202,26 @@
 
     </form>
   </div>
+
+
+
+  <!--  쿠폰 선택 모달 -->
+    <div id="couponModal" class="coupon-modal" style="display:none;">
+      <div class="coupon-modal-content">
+        <h3>쿠폰 선택</h3>
+        <ul>
+          <li><button class="coupon-option" data-discount="0.05">수수료 5% 할인 쿠폰</button></li>
+          <li><button class="coupon-option" data-discount="0.10">수수료 10% 할인 쿠폰</button></li>
+          <li><button class="coupon-option" data-discount="0.20">수수료 20% 할인 쿠폰</button></li>
+        </ul>
+        <button id="couponClose" class="coupon-close">닫기</button>
+      </div>
+    </div>
+
+
+
+
+
 </main>
 
 

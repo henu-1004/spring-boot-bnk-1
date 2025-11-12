@@ -82,7 +82,10 @@
 <main class="open2-account-container">
   <div class="open2-account-box">
     <h2>외화 입출금 통장 개설</h2>
-    <p class="desc">고객 정보를 확인하고 이체한도를 설정해주세요.</p>
+    <p class="desc">
+      이제 하나의 계좌로 달러부터 유로까지, 전 세계 주요 통화를 함께 관리하세요.<br>
+      USD·JPY·EUR·CNY·GBP·AUD 6개 통화가 자동으로 개설되어, 환전과 송금이 더욱 간편해집니다.
+    </p>
 
     <!-- ✅ 1. 고객 기본정보 -->
     <section class="open2-user-info-section">
@@ -119,18 +122,21 @@
       </div>
     </section>
 
-    <!--  4-1. 통화 선택 -->
+    <!-- 4-1. 통화 선택 -->
     <section class="open2-currency-section">
       <div class="open2-form-group">
         <label class="open2-form-label">통화 선택</label>
-        <select id="currency-select" class="open2-form-select">
-          <option value="USD" selected>달러 (USD)</option>
-          <option value="JPY">엔화 (JPY)</option>
-          <option value="EUR">유로 (EUR)</option>
-          <option value="CNY">위안화 (CNY)</option>
-          <option value="GBP">파운드 (GBP)</option>
-          <option value="AUD">호주달러 (AUD)</option>
-        </select>
+        <div class="open2-currency-box">
+          <label><input type="checkbox" checked disabled> 달러 (USD)</label>
+          <label><input type="checkbox" checked disabled> 엔화 (JPY)</label>
+          <label><input type="checkbox" checked disabled> 유로 (EUR)</label>
+          <label><input type="checkbox" checked disabled> 위안화 (CNY)</label>
+          <label><input type="checkbox" checked disabled> 파운드 (GBP)</label>
+          <label><input type="checkbox" checked disabled> 호주달러 (AUD)</label>
+        </div>
+        <p class="open2-guide-text open2-currency-guide">
+          모든 주요 통화 계좌가 자동으로 생성됩니다.
+        </p>
       </div>
     </section>
 
