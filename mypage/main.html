@@ -77,16 +77,36 @@
     </div>
   </header>
 
-<!-- ✅ 전체 레이아웃 수정 -->
+<!--  전체 레이아웃 수정 -->
 <main class="mypage-container">
   
-  <!-- ✅ 고정형 프로필 카드 (왼쪽 고정) -->
-  <aside class="profile-card">
-    <div class="profile-header">
-      <i class="fa-solid fa-circle-user"></i>
-      <h3>OOO 고객님</h3>
-      <p>최근 접속일 2025.11.02 15:03:03</p>
+<!--  고정형 프로필 카드 (왼쪽 고정) -->
+<aside class="profile-card">
+  <div class="profile-header">
+    <i class="fa-solid fa-circle-user"></i>
+    <h3>OOO 고객님</h3>
+    <p>최근 접속일 2025.11.02 15:03:03</p>
+
+    <!--  보안등급 정보 (등급 1개만 표시) -->
+    <div class="security-container">
+      <!-- <div class="security-info">
+        <span class="security-badge grade-3">보안등급 3등급</span>
+        <p class="limit-text">이체한도: 1일 1천만원 / 1회 1천만원</p>
+      </div>
+
+      <div class="security-info">
+        <span class="security-badge grade-2">보안등급 2등급</span>
+        <p class="limit-text">이체한도: 1일 5천만원 / 1회 1천만원</p>
+      </div> -->
+
+      <div class="security-info">
+        <span class="security-badge grade-1">보안등급 1등급</span>
+        <p class="limit-text">이체한도: 1일 5억원 / 1회 1억원</p>
+      </div>
     </div>
+
+  </div>
+
 
     <ul class="profile-info">
       <li><i class="fa-solid fa-user"></i> idididid</li>
