@@ -115,40 +115,58 @@
   <!-- ✅ 오른쪽 주요 내용 (스크롤 영역) -->
   <section class="account-section">
 
-    <!-- 최근 거래 내역 -->
-    <div class="transfer-history">
-      <h2>최근 거래 내역</h2>
-      <table class="history-table">
+    <!-- 나의 계좌정보 -->
+    <div class="my-account">
+      <div class="account-header">
+        <h2>나의 계좌정보</h2>
+      </div>
+
+      <div class="account-body">
+        <table class="account-table">
+          <tr>
+            <th>계좌명</th>
+            <th>계좌번호</th>
+            <th>잔액</th>
+            <th>이체</th>
+          </tr>
+          <tr>
+            <td>자유저축예금</td>
+            <td><button class="account-link">112-2188-1931-00</button></td>
+            <td>2,450,000원</td>
+            <td><button class="btn-transfer">이체</button></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+
+
+
+    <!-- 나의 외화예금 섹션 -->
+    <div class="deposit-section">
+      <h2>나의 외화예금</h2>
+
+      <table class="deposit-table">
         <thead>
           <tr>
-            <th>거래일시</th>
-            <th>구분</th>
-            <th>계좌번호</th>
-            <th>금액</th>
-            <th>메모</th>
+            <th>예금이름</th>
+            <th>예금계좌</th>
+            <th>잔액</th>
+            <th>만기일</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>2025-11-01 15:42</td>
-            <td>입금</td>
+            <td><a href="#" class="deposit-name" data-id="1">플로달러예금</a></td>
             <td>112-2188-1931-00</td>
-            <td>₩2,000,000</td>
-            <td>급여</td>
+            <td>$3,200</td>
+            <td>2029.10.03 (D-159)</td>
           </tr>
           <tr>
-            <td>2025-10-31 17:35</td>
-            <td>출금</td>
-            <td>112-2188-1931-00</td>
-            <td>₩500,000</td>
-            <td>월세</td>
-          </tr>
-          <tr>
-            <td>2025-10-30 09:22</td>
-            <td>출금</td>
-            <td>112-2188-1931-00</td>
-            <td>₩120,000</td>
-            <td>식비</td>
+            <td><a href="#" class="deposit-name" data-id="2">글로벌유로예금</a></td>
+            <td>112-5566-1823-00</td>
+            <td>€1,800</td>
+            <td>2027.06.22 (D-98)</td>
           </tr>
         </tbody>
       </table>
@@ -210,29 +228,7 @@
 
 
 
-    <!-- 나의 계좌정보 -->
-    <div class="my-account">
-      <div class="account-header">
-        <h2>나의 계좌정보</h2>
-      </div>
-
-      <div class="account-body">
-        <table class="account-table">
-          <tr>
-            <th>계좌명</th>
-            <th>계좌번호</th>
-            <th>잔액</th>
-            <th>이체</th>
-          </tr>
-          <tr>
-            <td>자유저축예금</td>
-            <td><button class="account-link">112-2188-1931-00</button></td>
-            <td>2,450,000원</td>
-            <td><button class="btn-transfer">이체</button></td>
-          </tr>
-        </table>
-      </div>
-    </div>
+    
 
     <!-- ✅ 외화 보유 현황 -->
     <div class="foreign-assets">
@@ -317,7 +313,7 @@
         <input type="password" placeholder="새 비밀번호 입력">
       </div>
 
-      <!-- ✅ 비밀번호 확인 -->
+      <!--  비밀번호 확인 -->
       <div class="form-group">
         <label>비밀번호 확인</label>
         <input type="password" placeholder="비밀번호를 다시 입력하세요">
@@ -362,7 +358,7 @@
           <span class="close-btn">&times;</span>
           <h2>환전 상세 내역</h2>
 
-          <table class="detail-table">
+          <table class="deposit-detail-table">
             <tbody>
               <tr><th>환전 번호</th><td id="ex-id">EX202511001</td></tr>
               <tr><th>환전 전 통화</th><td id="ex-from">USD</td></tr>
@@ -374,7 +370,7 @@
           </table>
 
           <h3>환전 금액 세부내역</h3>
-          <table class="detail-table">
+          <table class="deposit-detail-table">
             <tbody>
               <tr><th>수수료</th><td id="ex-fee">₩3,000</td></tr>
               <tr><th>원화금액</th><td id="ex-krw">₩690,125</td></tr>
@@ -384,7 +380,7 @@
           </table>
 
           <h3>수령 정보</h3>
-          <table class="detail-table">
+          <table class="deposit-detail-table">
             <tbody>
               <tr><th>수령희망지점</th><td id="ex-branch">BNK 부산본점</td></tr>
               <tr><th>수령희망일</th><td id="ex-pickup">2025-11-02</td></tr>
@@ -449,6 +445,47 @@
     </table>
   </div>
 </div>
+
+
+
+  <!--  예금 상세 모달 (통일된 스타일 적용) -->
+  <div id="depositModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>예금 상세정보</h2>
+
+      <table class="detail-table">
+        <tbody>
+          <tr><th>예금이름</th><td id="detail-name">플로달러예금</td></tr>
+          <tr><th>예금유형</th><td id="detail-type">자유적립식</td></tr>
+          <tr><th>예금계좌</th><td id="detail-account">112-2188-1931-00</td></tr>
+          <tr><th>가입일</th><td id="detail-join">2023-01-10</td></tr>
+          <tr><th>만기일</th><td id="detail-end">2029-10-03</td></tr>
+          <tr><th>금액</th><td id="detail-amount">$3,200</td></tr>
+          <tr><th>환율 적용 기준</th><td id="detail-rate">1,380.25</td></tr>
+          <tr><th>가입 통화</th><td id="detail-currency">USD</td></tr>
+          <tr><th>추가납입</th><td id="detail-extra">가능</td></tr>
+          <tr><th>자동 연장</th><td id="detail-auto">설정 안함</td></tr>
+          <tr><th>일부 출금</th><td id="detail-partial">불가능</td></tr>
+        </tbody>
+      </table>
+
+      <h3>거래 내역</h3>
+      <table class="detail-table transaction-table">
+        <thead>
+          <tr>
+            <th>거래 일시</th>
+            <th>입금액</th>
+            <th>총 잔액</th>
+          </tr>
+        </thead>
+        <tbody id="depositHistory">
+          <tr><td>2025-10-10</td><td>$500</td><td>$3,200</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
 
 
 

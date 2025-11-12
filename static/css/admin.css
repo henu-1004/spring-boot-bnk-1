@@ -1277,7 +1277,9 @@ body {
 /* 관리 버튼 스타일 */
 .qna-btn-ai,
 .qna-btn-approve,
-.qna-btn-view {
+.qna-btn-view,
+.btn-approve,
+.btn-disabled {
   border: none;
   border-radius: 6px;
   padding: 6px 12px;
@@ -1287,12 +1289,14 @@ body {
   transition: all 0.2s ease;
 }
 
+/* 개별 버튼 색상 */
 .qna-btn-ai {
   background-color: #4a6fa5;
   color: #fff;
 }
 
-.qna-btn-approve {
+.qna-btn-approve,
+.btn-approve {
   background-color: #7b61ff;
   color: #fff;
 }
@@ -1302,14 +1306,23 @@ body {
   color: #fff;
 }
 
+/* hover 효과 */
 .qna-btn-ai:hover {
   background-color: #3a5d8a;
 }
-.qna-btn-approve:hover {
+.qna-btn-approve:hover,
+.btn-approve:hover {
   background-color: #6a52e0;
 }
 .qna-btn-view:hover {
   background-color: #146c43;
+}
+
+/* 처리 불가 버튼 */
+.btn-disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
 }
 
 .qna-ai-draft-box {

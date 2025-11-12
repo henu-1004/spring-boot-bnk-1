@@ -2848,3 +2848,273 @@ body.event-page {
   text-align: center !important;
   vertical-align: middle;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.deposit-section {
+  margin-top: 40px;
+}
+
+.deposit-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.deposit-table th, .deposit-table td {
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.deposit-name {
+  color: #2C5DE5;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* 모달 */
+.deposit-modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex; justify-content: center; align-items: center;
+  z-index: 1000;
+}
+
+.deposit-modal-content {
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.deposit-close {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.deposit-detail-table th {
+  width: 40%;
+  background: #f5f5f5;
+  padding: 8px;
+  text-align: left;
+}
+
+.deposit-detail-table td {
+  padding: 8px;
+}
+
+.history-title {
+  margin-top: 25px;
+  font-size: 16px;
+  border-top: 2px solid #2C5DE5;
+  padding-top: 10px;
+}
+
+.deposit-history-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.deposit-history-table th, .deposit-history-table td {
+  border-bottom: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+
+/* =========================================================
+   💰 나의 외화예금 (deposit-section)
+   ========================================================= */
+.deposit-section {
+  background: #fff;
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 25px 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-top: 35px;
+}
+
+/* 제목 스타일 통일 */
+.deposit-section h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--main-color);
+  margin-bottom: 15px;
+}
+
+
+/* =========================================================
+   💰 예금 상세 모달 (환전/계좌와 통일)
+   ========================================================= */
+#depositModal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#depositModal .modal-content {
+  background: #fff;
+  border-radius: 14px;
+  padding: 32px 40px;
+  width: 700px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  position: relative;
+  animation: fadeIn 0.25s ease-in-out;
+}
+
+/* 제목 */
+#depositModal .modal-content h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--main-color);
+  text-align: center;
+  margin-bottom: 18px;
+  border-bottom: 1.5px solid #eee;
+  padding-bottom: 12px;
+}
+
+#depositModal .modal-content h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--main-color);
+  margin: 28px 0 10px;
+  border-left: 4px solid var(--main-color);
+  padding-left: 8px;
+}
+
+/* 닫기 버튼 */
+#depositModal .close-btn {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  font-size: 22px;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+#depositModal .close-btn:hover {
+  color: var(--main-color);
+}
+
+/* 표 스타일 (환전/계좌와 동일) */
+#depositModal .detail-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+#depositModal .detail-table th,
+#depositModal .detail-table td {
+  border: 1px solid #ddd;
+  padding: 10px 14px;
+  text-align: left;
+  line-height: 1.6;
+}
+
+#depositModal .detail-table th {
+  background: #f5f8fa;
+  color: #333;
+  font-weight: 600;
+  width: 32%;
+}
+
+#depositModal .detail-table td {
+  color: #444;
+}
+
+/* 스크롤바 */
+#depositModal .modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+#depositModal .modal-content::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+#depositModal .modal-content::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+
+
+/* ============================================
+   💰 나의 외화예금 (deposit-table 수정 완료)
+   ============================================ */
+.deposit-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  color: #222;
+  background-color: #fff;
+  border-spacing: 0;
+}
+
+/* ✅ 제목행 - 왼쪽정렬 고정 */
+.deposit-table th {
+  text-align: left;
+  background-color: #f5f8fa;
+  padding: 12px 14px;
+  font-weight: 500;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+  vertical-align: middle;
+}
+
+/* ✅ 데이터행 - 전부 왼쪽정렬 (가운데 금지) */
+.deposit-table td {
+  text-align: left;
+  padding: 12px 14px;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  vertical-align: middle;
+  line-height: 1.5;
+}
+
+/* ✅ 예금이름 링크 */
+.deposit-name {
+  color: #2C5DE5;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.deposit-name:hover {
+  color: #0048ff;
+  text-decoration: underline;
+}
+
+/* ✅ hover 효과 */
+.deposit-table tbody tr:hover td {
+  background-color: #f9fafc;
+}

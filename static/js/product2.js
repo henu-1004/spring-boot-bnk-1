@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // 상품관리 섹션만 선택 (외화예금 상품 현황과 분리)
   const productManageSection = document.querySelector(".product-card:nth-of-type(2)");
   if (!productManageSection) return;
 
@@ -15,23 +14,18 @@ document.addEventListener("DOMContentLoaded", function () {
       btn.classList.add("active");
 
       rows.forEach((row) => {
-        // data-status가 일치할 때만 표시
-        if (row.dataset.status) {
-          row.style.display = row.dataset.status === status ? "" : "none";
-        }
+        row.style.display = row.dataset.status === status ? "" : "none";
       });
     });
   });
 
-  // “상품 게시” 버튼 클릭 이벤트
+  // 상품 게시 버튼
   const postButtons = productManageSection.querySelectorAll(".btn-post");
   postButtons.forEach((btn) => {
     btn.addEventListener("click", function () {
       const productName = this.closest("tr").children[0].textContent.trim();
-
-      // Confirm 메시지 변경
       if (confirm(`${productName} 상품을 등록하시겠습니까?`)) {
-        alert("상품이 게시되었습니다");
+        alert("상품이 게시되었습니다.");
         this.textContent = "게시 완료";
         this.disabled = true;
         this.classList.add("btn-disabled");
@@ -39,6 +33,31 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // 기본으로 “승인 대기 중” 탭을 선택
-  tabButtons[0].click();
+  // 승인 완료 버튼 → 심사 대기 중으로 전환
+  const approveButtons = productManageSection.querySelectorAll(".btn-approve");
+  approveButtons.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      const row = this.closest("tr");
+      const productName = row.children[0].textContent.trim();
+
+      if (confirm(`${productName} 상품의 승인을 완료하시겠습니까?`)) {
+        alert("승인이 완료되었습니다. 심사 대기 중으로 상태가 변경됩니다.");
+
+        // 상태 변경
+        row.dataset.status = "review";
+        const badge = row.querySelector(".status-badge");
+        badge.className = "status-badge status-review";
+        badge.textContent = "심사 대기 중";
+
+        // 버튼 비활성화 처리
+        this.textContent = "처리 불가";
+        this.disabled = true;
+        this.classList.remove("btn-approve");
+        this.classList.add("btn-disabled");
+      }
+    });
+  });
+
+  // 기본으로 승인 대기 중 탭 선택
+  if (tabButtons.length > 0) tabButtons[0].click();
 });
